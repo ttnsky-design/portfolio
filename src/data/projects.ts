@@ -223,6 +223,21 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/youtravel-me.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Запустили новую рекламную кампанию, которая выделила бренд авторских туров на фоне конкурентов и оставила эмоциональный отклик.\n\nГлавный образ кампании — лицо человека, его эмоция: он разделяет момент, растворяется в нём. Весь контент был сделан с помощью нейросетей.",
+      sections: [
+        { image: "/images/projects/youtravel-me/kv-menyaet-navsegda.png", width: 1156, height: 650, alt: "KV «Тот самый момент… когда отпуск меняет навсегда»" },
+        { image: "/images/projects/youtravel-me/kv-nastoyashchiy.png", width: 1158, height: 482, alt: "KV «Тот самый момент… когда отпуск настоящий»" },
+        { image: "/images/projects/youtravel-me/kv-stoil.png", width: 1158, height: 482, alt: "KV «Тот самый момент… который точно того стоил»" },
+        { image: "/images/projects/youtravel-me/kv-znakomstva.png", width: 1158, height: 482, alt: "KV «Тот самый момент… когда привозишь из отпуска знакомства»" },
+        { image: "/images/projects/youtravel-me/kv-otpustit.png", width: 1158, height: 482, alt: "KV «Тот самый момент… когда можно всё отпустить»" },
+        { image: "/images/projects/youtravel-me/kv-voobrazhenie.png", width: 1158, height: 482, alt: "KV «Тот самый момент… когда отпуск пробуждает воображение»" },
+        { image: "/images/projects/youtravel-me/kv-vasha-istoriya.png", width: 1158, height: 483, alt: "KV «Тот самый момент… который станет вашей историей»" },
+        { image: "/images/projects/youtravel-me/storis-adaptatsii.png", width: 1148, height: 534, alt: "Сторис-адаптации баннеров" },
+      ],
+    },
   },
   {
     slug: "yango",
