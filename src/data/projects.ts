@@ -168,6 +168,18 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/sovkombank.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Обновили подход к вёрстке статичных и анимационных макетов для традиционных размещений. Сделали подачу офферов более заметной и современно переосмыслили композицию макетов.\n\nУлучшили анимацию: для коротких форматов сделали её сдержаннее, а для длинных — более динамичной. Добавили больше креативных и юмористических решений в визуальную подачу.",
+      sections: [
+        { image: "/images/projects/sovkombank/bannery-10-mesyatsev-halva.png", width: 1181, height: 609, alt: "Баннеры «10 месяцев без %» и «Халва»" },
+        { image: "/images/projects/sovkombank/banner-10-mesyatsev-krupno.png", width: 1160, height: 580, alt: "Баннер «10 месяцев без %» — крупный формат" },
+        { image: "/images/projects/sovkombank/wealth-management-kv1.png", width: 1161, height: 579, alt: "Sovcombank Wealth Management — «Благосостояние, создающее свободу»" },
+        { image: "/images/projects/sovkombank/wealth-management-kv2.png", width: 1161, height: 580, alt: "Sovcombank Wealth Management — вариант с автомобилем в пустыне" },
+        { image: "/images/projects/sovkombank/banner-halva-rassrochka.png", width: 1160, height: 580, alt: "Баннер «Халва» — рассрочка 24 месяца" },
+      ],
+    },
   },
   {
     slug: "pik",
