@@ -214,6 +214,21 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/grafit.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Фирменный стиль для нового жилого комплекса\n\nСуть бренда: это новый формат городского жителя — новая техническая интеллигенция, выбирающая центр не ради статуса, а ради точности, качества и спокойной, защищённой жизни. Центр, собранный как проект. Центр, созданный для будущего.",
+      sections: [
+        { image: "/images/projects/grafit/logotip-tisnenie.png", width: 1160, height: 653, alt: "Логотип, тиснение" },
+        { image: "/images/projects/grafit/billboard-start-prodazh.png", width: 1160, height: 653, alt: "Билборд «Старт продаж»" },
+        { image: "/images/projects/grafit/buklet.png", width: 1161, height: 653, alt: "Буклет" },
+        { image: "/images/projects/grafit/tsvetovye-varianty.png", width: 1161, height: 613, alt: "Цветовые варианты айдентики" },
+        { image: "/images/projects/grafit/vizitka.png", width: 1160, height: 652, alt: "Визитка" },
+        { image: "/images/projects/grafit/merch-i-navigatsiya.png", width: 1166, height: 656, alt: "Мерч и навигация" },
+        { image: "/images/projects/grafit/buklet-s-interyerami.png", width: 1166, height: 656, alt: "Буклет с интерьерами" },
+        { image: "/images/projects/grafit/termostakan-i-birka.png", width: 1166, height: 656, alt: "Мерч — термостакан и табличка на дверь" },
+      ],
+    },
   },
   {
     slug: "svet-vnutri-menya",
