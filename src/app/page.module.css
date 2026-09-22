@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 24px;
+  text-align: center;
+  font-family: var(--font-geist-sans);
+}
+
+.note {
+  color: var(--foreground);
+  opacity: 0.6;
+  font-size: 14px;
+}
