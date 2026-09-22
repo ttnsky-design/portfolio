@@ -133,6 +133,15 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/vk-strimmur.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "СтриММур — онлайн-стрим из котодома фонда «Ника» на площадках VK Видео и VK Play Live, объединивший заботу о животных, развлечения и выступления популярных артистов.",
+      sections: [
+        { image: "/images/projects/vk-strimmur/strimmur-programma-efirov.png", width: 1222, height: 2717, alt: "СтриММур — афиша и программа эфиров" },
+        { image: "/images/projects/vk-strimmur/mamin-layk-serdtse.png", width: 1160, height: 3027, alt: "Мамин лайк — активация «Сердце»" },
+      ],
+    },
   },
   {
     slug: "maccoffee",
