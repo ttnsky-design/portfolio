@@ -60,6 +60,19 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/yandex-agency-friends.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Вечеринка для агентств, которые работают с Яндекс.Рекламой.\n\nДизайн носителей в фирменном стиле, визуализация, предпечатная подготовка.",
+      sections: [
+        { image: "/images/projects/yandex-agency-friends/kv-banner.png", width: 1158, height: 651, alt: "Ключевой визуал «Agency Friends»" },
+        { image: "/images/projects/yandex-agency-friends/fotografii-s-meropriyatiya.png", width: 1158, height: 565, alt: "Фотографии с мероприятия" },
+        { image: "/images/projects/yandex-agency-friends/kv-retro-avto.png", width: 1160, height: 653, alt: "Ключевой визуал — ретро-автомобиль" },
+        { image: "/images/projects/yandex-agency-friends/beydzhi-uchastnikov.png", width: 1155, height: 650, alt: "Бейджи участников" },
+        { image: "/images/projects/yandex-agency-friends/afishi-na-ulitse.png", width: 1160, height: 653, alt: "Афиши на улице" },
+        { image: "/images/projects/yandex-agency-friends/foto-s-vecherinki.png", width: 1160, height: 778, alt: "Фотографии с вечеринки" },
+      ],
+    },
   },
   {
     slug: "capaco",
