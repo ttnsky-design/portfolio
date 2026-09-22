@@ -1,0 +1,172 @@
+.page {
+  padding: 20px 140px 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.leftColumn,
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.experienceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1440px;
+  margin: 64px auto 0;
+}
+
+.experienceSection h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.name {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: pre-line;
+}
+
+.role {
+  font-size: 20px;
+}
+
+.keyProjects {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.sectionLabel {
+  font-weight: 700;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.educationEntry,
+.courseEntry {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.coursesList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.experienceRole {
+  font-weight: 700;
+}
+
+.experienceStack {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.experienceCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.experienceCompany {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.experienceMuted {
+  color: var(--foreground-muted);
+}
+
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.bulletList li {
+  list-style: disc;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 387px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .page {
+    padding: 20px 48px 64px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .experienceSection {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px 24px 48px;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+}

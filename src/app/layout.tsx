@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/config/site";
+import { Anonymous_Pro } from "next/font/google";
+import localFont from "next/font/local";
+import SiteNav from "@/components/SiteNav";
+import { OWNER_NAME, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/config/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const anonymousPro = Anonymous_Pro({
+  variable: "--font-body",
   subsets: ["latin", "cyrillic"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin", "cyrillic"],
+const suisseIntl = localFont({
+  variable: "--font-nav",
+  src: "../fonts/SuisseIntl-Regular.woff2",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_NAME,
-    template: `%s — ${SITE_NAME}`,
+    template: `%s — ${OWNER_NAME}`,
   },
   description: SITE_DESCRIPTION,
   openGraph: {
@@ -37,8 +41,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ru" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="ru" className={`${anonymousPro.variable} ${suisseIntl.variable}`}>
+      <body>
+        <SiteNav />
+        {children}
+      </body>
     </html>
   );
 }
