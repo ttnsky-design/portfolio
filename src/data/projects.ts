@@ -106,6 +106,18 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/diksi-brat.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Запустили коллаборацию Дикси × Брат: сделали кей вижуал, рассказывающий о конкурсе и мерче, разработали оформление флагманского магазина.\n\nВыбрали VHS-эстетику для визуалов и создали несколько интересных локаций.",
+      sections: [
+        { image: "/images/projects/diksi-brat/afishi-na-ulitse.png", width: 1160, height: 653, alt: "Афиши «Дикси × Брат» на улице" },
+        { image: "/images/projects/diksi-brat/vhs-i-pos-v-magazine.png", width: 1158, height: 778, alt: "VHS-инсталляция и POS-материалы в магазине" },
+        { image: "/images/projects/diksi-brat/instalyatsiya-vhs.png", width: 1162, height: 774, alt: "Инсталляция в стиле VHS с креслом режиссёра" },
+        { image: "/images/projects/diksi-brat/vizualizatsiya-lokatsii.png", width: 1128, height: 921, alt: "Визуализация фирменной локации в магазине" },
+        { image: "/images/projects/diksi-brat/detali-aktivatsii.png", width: 1164, height: 673, alt: "Детали активации — экраны, стаканчики, вывеска" },
+      ],
+    },
   },
   {
     slug: "rox",
