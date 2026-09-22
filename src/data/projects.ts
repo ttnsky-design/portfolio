@@ -126,6 +126,20 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/rox.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Создали образ бренда, который считывает целевая аудитория. Сформировали рамку слоганов на основе «дико», сделали KV и ресайзы.",
+      sections: [
+        { image: "/images/projects/rox/kv-diko-krutoy.png", width: 1158, height: 651, alt: "Ключевой визуал «Дико крутой»" },
+        { image: "/images/projects/rox/bannery-diko.png", width: 1157, height: 656, alt: "Баннеры «Дико крутой», «выгодное», «красивый», «комфортный»" },
+        { image: "/images/projects/rox/storis-adaptatsii.png", width: 1157, height: 567, alt: "Сторис-адаптации баннеров" },
+        { image: "/images/projects/rox/banner-diko-krasivyy.png", width: 1162, height: 654, alt: "Баннер «Дико красивый»" },
+        { image: "/images/projects/rox/banner-diko-komfortnyy.png", width: 1162, height: 654, alt: "Баннер «Дико комфортный»" },
+        { image: "/images/projects/rox/banner-diko-vygodnyy.png", width: 1162, height: 654, alt: "Баннер «Дико выгодный в апреле»" },
+        { image: "/images/projects/rox/banner-s-tsenoy.png", width: 1162, height: 654, alt: "Баннер с ценой" },
+      ],
+    },
   },
   {
     slug: "alfa-human",
