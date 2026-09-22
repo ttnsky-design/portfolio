@@ -188,6 +188,16 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/pik.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "(Летние каникулы, зимние каникулы, каток, открытие школы и др.)\n\nСобытия для жителей жилых комплексов ПИК, которые объединяют соседей, создают поводы для общения и делают повседневную жизнь в районе насыщеннее.",
+      sections: [
+        { image: "/images/projects/pik/vse-ustroeno-ustraivaytes.png", width: 1162, height: 3087, alt: "Летний ивент «Всё устроено — устраивайтесь»" },
+        { image: "/images/projects/pik/pik-kanikuly.png", width: 1164, height: 2289, alt: "Ивент «Пик каникулы»" },
+        { image: "/images/projects/pik/istoriya-v-kazhdoy-detali.png", width: 1160, height: 3010, alt: "Ивент «История в каждой детали» — открытие школы" },
+      ],
+    },
   },
   {
     slug: "vk-strimmur",
