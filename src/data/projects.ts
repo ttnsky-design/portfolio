@@ -192,6 +192,20 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/yango.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      descriptionLeft:
+        "Концепция брендированного мероприятия / запуска Yango Super App\n\nОсновная идея — соединить историческое наследие Омана и современные технологии.",
+      sections: [
+        { image: "/images/projects/yango/kv-launch.png", width: 1160, height: 653, alt: "Ключевой визуал «The Launch of a New Era»" },
+        { image: "/images/projects/yango/ekran-na-ploshchadke.png", width: 1160, height: 772, alt: "Диджитал-экран на площадке" },
+        { image: "/images/projects/yango/konvert-priglashenie.png", width: 1160, height: 464, alt: "Конверт-приглашение" },
+        { image: "/images/projects/yango/tekst-priglasheniya.png", width: 1149, height: 779, alt: "Текст приглашения на арабском" },
+        { image: "/images/projects/yango/vizualizatsiya-zala.png", width: 1155, height: 650, alt: "Визуализация зала мероприятия" },
+        { image: "/images/projects/yango/pattern-i-siluety.png", width: 1160, height: 492, alt: "Фирменный паттерн и силуэты" },
+        { image: "/images/projects/yango/immersivniy-performans.png", width: 1158, height: 652, alt: "Иммерсивный перформанс на мероприятии" },
+        { image: "/images/projects/yango/menyu-i-priglashenie.png", width: 1160, height: 620, alt: "Меню и текст приглашения" },
+      ],
+    },
   },
   {
     slug: "grafit",
