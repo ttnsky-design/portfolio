@@ -150,6 +150,20 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/maccoffee.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Креативная концепция для продукта MacCoffee Cappuccino di Torino\n\nТвоё время — это время, которое ты можешь посвятить только себе, своему удовольствию, настроению и перезарядке. В каждом дне можно найти время, чтобы позаниматься тем, что любишь и насладиться вкусным кофе, которое идеально дополнит этот момент наедине с собой.\n\nНаши герои занимаются любимыми делами и проводят me-time с чашечкой ароматного Сappuccino di torino.\n\nВ визуалах используем теплую пленочную стилистику, передаем атмосферу спокойствия и уюта.",
+      sections: [
+        { image: "/images/projects/maccoffee/kv-koritsa.png", width: 1160, height: 653, alt: "KV «Твоё время» — ароматная корица" },
+        { image: "/images/projects/maccoffee/kv-tyomniy-shokolad-uyut.png", width: 1160, height: 653, alt: "KV «Твоё время» — тёмный шоколад, уют" },
+        { image: "/images/projects/maccoffee/kv-tyomniy-shokolad-muzyka.png", width: 1160, height: 653, alt: "KV «Твоё время» — тёмный шоколад, музыка" },
+        { image: "/images/projects/maccoffee/kv-italyanskoe-udovolstvie-rim.png", width: 1160, height: 653, alt: "KV «Чашечка итальянского удовольствия» — Рим" },
+        { image: "/images/projects/maccoffee/kv-italyanskoe-udovolstvie-italiya.png", width: 1160, height: 653, alt: "KV «Чашечка итальянского удовольствия» — Италия" },
+        { image: "/images/projects/maccoffee/kv-vse-dorogi.png", width: 1160, height: 653, alt: "KV «Все дороги ведут к нему»" },
+        { image: "/images/projects/maccoffee/kv-italiya-v-chashke.png", width: 1160, height: 653, alt: "KV «Италия в каждой чашке»" },
+      ],
+    },
   },
   {
     slug: "youtravel-me",
