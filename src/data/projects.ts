@@ -262,6 +262,18 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/random-projects.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      descriptionLeft: "Key Visuals, не вошедшие в проекты.",
+      sections: [
+        { image: "/images/projects/random-projects/yandex-27-big-birthday-mashup.png", width: 1160, height: 653, alt: "Yandex 27 — Big Birthday Mashup KV" },
+        { image: "/images/projects/random-projects/sberdevices-na-svyazi.png", width: 1160, height: 653, alt: "SberDevices — «На связи» KV" },
+        { image: "/images/projects/random-projects/sberdevices-trendorium.png", width: 1159, height: 652, alt: "SberDevices — «Трендориум» KV" },
+        { image: "/images/projects/random-projects/sberdevices-flows.png", width: 1161, height: 653, alt: "SberDevices — «Flows» KV" },
+        { image: "/images/projects/random-projects/belaya-dacha-v-poryadke-ovoshchey.png", width: 1158, height: 651, alt: "Белая Дача — «В порядке овощей»" },
+        { image: "/images/projects/random-projects/tatneft-kv-prilozheniya.png", width: 1159, height: 652, alt: "Татнефть — KV мобильного приложения" },
+        { image: "/images/projects/random-projects/prezentatsiya-mediastrategiya.png", width: 1156, height: 496, alt: "Презентация — медиастратегия" },
+      ],
+    },
   },
 ];
 
