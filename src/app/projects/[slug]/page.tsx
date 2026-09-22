@@ -39,25 +39,45 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
 
       {caseContent ? (
         <>
-          <div className={styles.intro}>
+          <div
+            className={
+              caseContent.descriptionRight
+                ? styles.intro
+                : `${styles.intro} ${styles.introSingle}`
+            }
+          >
             <div className={styles.introCol}>
               {caseContent.descriptionLeft.split("\n\n").map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              {!caseContent.descriptionRight && caseContent.caseUrl && (
+                <a
+                  className={styles.caseLink}
+                  href={caseContent.caseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  смотреть кейс полностью
+                </a>
+              )}
             </div>
-            <div className={styles.introCol}>
-              {caseContent.descriptionRight.split("\n\n").map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-              <a
-                className={styles.caseLink}
-                href={caseContent.caseUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                смотреть кейс полностью
-              </a>
-            </div>
+            {caseContent.descriptionRight && (
+              <div className={styles.introCol}>
+                {caseContent.descriptionRight.split("\n\n").map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                {caseContent.caseUrl && (
+                  <a
+                    className={styles.caseLink}
+                    href={caseContent.caseUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    смотреть кейс полностью
+                  </a>
+                )}
+              </div>
+            )}
           </div>
 
           <div className={styles.sections}>

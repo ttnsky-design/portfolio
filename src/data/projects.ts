@@ -6,10 +6,10 @@ export type ProjectCaseSection = {
 };
 
 export type ProjectCaseContent = {
-  badge: string;
+  badge?: string;
   descriptionLeft: string;
-  descriptionRight: string;
-  caseUrl: string;
+  descriptionRight?: string;
+  caseUrl?: string;
   sections: ProjectCaseSection[];
 };
 
@@ -68,6 +68,23 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/capaco.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "С нуля упаковали бренд производителя пластиковых крышек.\n\nНовый завод в ОАЭ получил лаконичный нейм CAPACO: CAps PAckaging COmpany. Доступно носителям любого языка.\n\nМинимализм, модульность и промышленная эстетика — основа визуала нового бренда. Приземистый гротеск, строгая сетка и геометрия символа отражают производственную экспертизу компании. Продумали все точки контакта — от самой упаковки до транспорта, который её развозит и цифровых интерфейсов.",
+      caseUrl: "https://dprofile.ru/case/149869/capaco",
+      sections: [
+        { image: "/images/projects/capaco/zagolovok.png", width: 1160, height: 653, alt: "Заголовок проекта" },
+        { image: "/images/projects/capaco/brendbuk.png", width: 1188, height: 668, alt: "Брендбук" },
+        { image: "/images/projects/capaco/buklet-i-identika.png", width: 1156, height: 657, alt: "Буклет и айдентика" },
+        { image: "/images/projects/capaco/sayt.png", width: 1156, height: 650, alt: "Сайт и цифровые интерфейсы" },
+        { image: "/images/projects/capaco/upakovka.png", width: 1152, height: 833, alt: "Упаковка" },
+        { image: "/images/projects/capaco/brendirovanie-furgona.png", width: 1156, height: 650, alt: "Брендирование фургона" },
+        { image: "/images/projects/capaco/spetsodezhda.png", width: 1156, height: 569, alt: "Спецодежда" },
+        { image: "/images/projects/capaco/naruzhnaya-reklama.png", width: 1156, height: 677, alt: "Наружная реклама" },
+        { image: "/images/projects/capaco/merch.png", width: 1156, height: 667, alt: "Мерч" },
+      ],
+    },
   },
   {
     slug: "diksi-brat",

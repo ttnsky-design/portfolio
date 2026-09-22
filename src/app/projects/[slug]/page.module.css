@@ -36,6 +36,11 @@
   line-height: 1.5;
 }
 
+.introSingle {
+  grid-template-columns: 1fr;
+  max-width: 560px;
+}
+
 .introCol {
   display: flex;
   flex-direction: column;
