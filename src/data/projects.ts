@@ -173,6 +173,23 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/svet-vnutri-menya.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      descriptionLeft:
+        "Создали коллекцию мерча для жителей мурманской области.\n\nСообщение-манифест личной устойчивости: когда солнце уходит за горизонт, единственным настоящим маяком остается внутренний ресурс человека. Этот концепт про то, что темнота вокруг не способна поглотить то сияние, которое мы несем в себе.",
+      sections: [
+        { image: "/images/projects/svet-vnutri-menya/severnoe-siyanie-referensy.png", width: 1153, height: 761, alt: "Референсы северного сияния" },
+        { image: "/images/projects/svet-vnutri-menya/hudi.png", width: 1163, height: 665, alt: "Худи со светящимся принтом" },
+        { image: "/images/projects/svet-vnutri-menya/hudi-v-temnote.png", width: 1162, height: 933, alt: "Флуоресцентный принт в темноте" },
+        { image: "/images/projects/svet-vnutri-menya/svitshot.png", width: 1160, height: 663, alt: "Свитшот со светящимся принтом" },
+        { image: "/images/projects/svet-vnutri-menya/svecha.png", width: 1160, height: 653, alt: "Свеча «Свет внутри меня»" },
+        { image: "/images/projects/svet-vnutri-menya/chay.png", width: 1160, height: 663, alt: "Чай «Завари и тепло внутри»" },
+        { image: "/images/projects/svet-vnutri-menya/spichki.png", width: 1160, height: 653, alt: "Спички «Свет внутри меня»" },
+        { image: "/images/projects/svet-vnutri-menya/termos.png", width: 1160, height: 653, alt: "Термос «Тепло внутри меня»" },
+        { image: "/images/projects/svet-vnutri-menya/gazovaya-lampa.png", width: 1160, height: 667, alt: "Газовая лампа" },
+        { image: "/images/projects/svet-vnutri-menya/zazhigalka.png", width: 1159, height: 694, alt: "Зажигалка «Свет внутри меня»" },
+        { image: "/images/projects/svet-vnutri-menya/fonarik.png", width: 1172, height: 647, alt: "Фонарик" },
+      ],
+    },
   },
   {
     slug: "random-projects",
