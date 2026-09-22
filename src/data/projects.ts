@@ -109,6 +109,18 @@ export const PROJECTS: Project[] = [
     cardImage: "/images/home/alfa-human.png",
     cardWidth: 374,
     cardHeight: 271,
+    caseContent: {
+      badge: "× narrators",
+      descriptionLeft:
+        "Разработали айдентику для международного фестиваля искусств с акцентом на классическую музыку. Фестиваль организовывается при поддержке Альфа-Банка и Правительства Нижегородской области.\n\nЗабрендировали десятки поверхностей фестиваля, а на всех городских экранах выводились индивидуальные афиши событий.",
+      sections: [
+        { image: "/images/projects/alfa-human/kv-festivalya.png", width: 1160, height: 652, alt: "Ключевой визуал фестиваля" },
+        { image: "/images/projects/alfa-human/afishi-sobytiy.png", width: 1158, height: 588, alt: "Афиши событий фестиваля" },
+        { image: "/images/projects/alfa-human/buklet-i-afisha-tango.png", width: 1161, height: 531, alt: "Буклет и афиша «Миры танго»" },
+        { image: "/images/projects/alfa-human/vizualizatsiya-instalyatsii.png", width: 1162, height: 654, alt: "Визуализация сценической инсталляции" },
+        { image: "/images/projects/alfa-human/afishi-na-fasade.png", width: 1159, height: 748, alt: "Афиши на фасаде здания" },
+      ],
+    },
   },
   {
     slug: "sovkombank",
