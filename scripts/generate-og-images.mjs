@@ -16,11 +16,7 @@ const ROOT = process.cwd();
 const OUT_DIR = join(ROOT, "public", "og");
 const SIZE = { width: 1200, height: 630 };
 
-const OWNER_NAME = "Татьяна Колышкина";
-const OWNER_ROLE = "графический дизайнер";
-const SITE_DESCRIPTION =
-  "Портфолио графического дизайнера: айдентика, event и digital-кампании для Yango, Яндекса, VK, Пика и Совкомбанка.";
-
+const { OWNER_NAME, OWNER_ROLE, SITE_DESCRIPTION } = await import("../src/config/site.ts");
 const { PROJECTS } = await import("../src/data/projects.ts");
 
 async function save(name, buffer) {
