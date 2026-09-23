@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { OWNER_NAME } from "@/config/site";
 import { getProjectBySlug, PROJECTS } from "@/data/projects";
 import styles from "./page.module.css";
 
@@ -15,11 +16,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return {};
+  const title = project.title;
+  const description = project.category
+    ? `${project.title} — ${project.category}`
+    : project.title;
+  const fullTitle = `${title} — ${OWNER_NAME}`;
   return {
-    title: project.title,
-    description: project.category
-      ? `${project.title} — ${project.category}`
-      : project.title,
+    title,
+    description,
+    openGraph: { title: fullTitle, description },
+    twitter: { title: fullTitle, description },
   };
 }
 

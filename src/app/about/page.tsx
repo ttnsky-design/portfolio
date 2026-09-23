@@ -3,8 +3,14 @@ import Image from "next/image";
 import { OWNER_NAME, OWNER_ROLE } from "@/config/site";
 import styles from "./page.module.css";
 
+const ABOUT_TITLE = `Обо мне — ${OWNER_NAME}`;
+const ABOUT_DESCRIPTION = `${OWNER_NAME} — ${OWNER_ROLE}. Опыт, навыки и путь в дизайне.`;
+
 export const metadata: Metadata = {
   title: "Обо мне",
+  description: ABOUT_DESCRIPTION,
+  openGraph: { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION, images: ["/opengraph-image"] },
+  twitter: { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION, images: ["/opengraph-image"] },
 };
 
 const EXPERIENCE_LEFT = [

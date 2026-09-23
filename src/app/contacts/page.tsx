@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
-import { CONTACTS, SOCIAL_LINKS } from "@/config/site";
+import { CONTACTS, OWNER_NAME, SOCIAL_LINKS } from "@/config/site";
 import styles from "./page.module.css";
+
+const CONTACTS_TITLE = `Контакты — ${OWNER_NAME}`;
+const CONTACTS_DESCRIPTION = `Свяжитесь с ${OWNER_NAME}: Telegram, почта, Behance и Dprofile.`;
 
 export const metadata: Metadata = {
   title: "Контакты",
+  description: CONTACTS_DESCRIPTION,
+  openGraph: {
+    title: CONTACTS_TITLE,
+    description: CONTACTS_DESCRIPTION,
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    title: CONTACTS_TITLE,
+    description: CONTACTS_DESCRIPTION,
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function ContactsPage() {
