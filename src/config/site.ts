@@ -1,5 +1,4 @@
-// TODO: заменить на реальный домен после подключения к Vercel
-export const SITE_URL = "https://example.com";
+export const SITE_URL = "https://ttnsky.vercel.app";
 
 export const OWNER_NAME = "Татьяна Колышкина";
 export const OWNER_ROLE = "графический дизайнер";
