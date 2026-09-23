@@ -21,11 +21,12 @@ export async function generateMetadata({
     ? `${project.title} — ${project.category}`
     : project.title;
   const fullTitle = `${title} — ${OWNER_NAME}`;
+  const images = [`/og/${project.slug}.png`];
   return {
     title,
     description,
-    openGraph: { title: fullTitle, description },
-    twitter: { title: fullTitle, description },
+    openGraph: { title: fullTitle, description, images },
+    twitter: { title: fullTitle, description, images },
   };
 }
 

@@ -9,8 +9,8 @@ const ABOUT_DESCRIPTION = `${OWNER_NAME} — ${OWNER_ROLE}. Опыт, навык
 export const metadata: Metadata = {
   title: "Обо мне",
   description: ABOUT_DESCRIPTION,
-  openGraph: { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION, images: ["/opengraph-image"] },
-  twitter: { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION, images: ["/opengraph-image"] },
+  openGraph: { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION, images: ["/og/default.png"] },
+  twitter: { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION, images: ["/og/default.png"] },
 };
 
 const EXPERIENCE_LEFT = [

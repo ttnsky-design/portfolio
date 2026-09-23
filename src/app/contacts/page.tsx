@@ -3,7 +3,7 @@ import { CONTACTS, OWNER_NAME, SOCIAL_LINKS } from "@/config/site";
 import styles from "./page.module.css";
 
 const CONTACTS_TITLE = `Контакты — ${OWNER_NAME}`;
-const CONTACTS_DESCRIPTION = `Свяжитесь с ${OWNER_NAME}: Telegram, почта, Behance и Dprofile.`;
+const CONTACTS_DESCRIPTION = "Контакты: Telegram, почта, Behance и Dprofile.";
 
 export const metadata: Metadata = {
   title: "Контакты",
@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: CONTACTS_TITLE,
     description: CONTACTS_DESCRIPTION,
-    images: ["/opengraph-image"],
+    images: ["/og/default.png"],
   },
   twitter: {
     title: CONTACTS_TITLE,
     description: CONTACTS_DESCRIPTION,
-    images: ["/opengraph-image"],
+    images: ["/og/default.png"],
   },
 };
 
