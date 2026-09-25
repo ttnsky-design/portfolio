@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
   return (
     <main className={styles.page}>
       <div className={styles.header}>
-        <h1>{project.title}</h1>
+        <h1>{caseContent?.heading ?? project.title}</h1>
         {caseContent?.narrators && <NarratorsBadge />}
       </div>
 

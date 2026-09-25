@@ -6,6 +6,8 @@ export type ProjectCaseSection = {
 };
 
 export type ProjectCaseContent = {
+  /** Heading on the case page when it differs from the card title. */
+  heading?: string;
   narrators?: boolean;
   descriptionLeft: string;
   descriptionRight?: string;
@@ -61,9 +63,10 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
+      heading: "AGENCY FRIENDS",
       narrators: true,
       descriptionLeft:
-        "Вечеринка для агентств, которые работают с Яндекс.Рекламой.\n\nДизайн носителей в фирменном стиле, визуализация, предпечатная подготовка.",
+        "Вечеринка для агентств, которые работают с Яндекс.Рекламой\n\nДизайн носителей в фирменном стиле, визуализация, предпечатная подготовка",
       sections: [
         { image: "/images/projects/yandex-agency-friends/kv-banner.png", width: 1158, height: 651, alt: "Ключевой визуал «Agency Friends»" },
         { image: "/images/projects/yandex-agency-friends/fotografii-s-meropriyatiya.png", width: 1158, height: 565, alt: "Фотографии с мероприятия" },
