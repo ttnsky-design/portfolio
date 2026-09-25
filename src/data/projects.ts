@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
       descriptionLeft:
         "Вечеринка для агентств, которые работают с Яндекс.Рекламой\n\nДизайн носителей в фирменном стиле, визуализация, предпечатная подготовка",
       sections: [
-        { image: "/images/projects/yandex-agency-friends/kv-banner.png", width: 1158, height: 651, alt: "Ключевой визуал «Agency Friends»" },
+        { image: "/images/projects/yandex-agency-friends/kv-glavnyy.png", width: 1158, height: 651, alt: "Ключевой визуал «Agency Friends»" },
         { image: "/images/projects/yandex-agency-friends/fotografii-s-meropriyatiya.png", width: 1158, height: 565, alt: "Фотографии с мероприятия" },
         { image: "/images/projects/yandex-agency-friends/kv-retro-avto.png", width: 1160, height: 653, alt: "Ключевой визуал — ретро-автомобиль" },
         { image: "/images/projects/yandex-agency-friends/beydzhi-uchastnikov.png", width: 1155, height: 650, alt: "Бейджи участников" },
@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
         { image: "/images/projects/capaco/upakovka.png", width: 1152, height: 833, alt: "Упаковка" },
         { image: "/images/projects/capaco/brendirovanie-furgona.png", width: 1156, height: 650, alt: "Брендирование фургона" },
         { image: "/images/projects/capaco/spetsodezhda.png", width: 1156, height: 569, alt: "Спецодежда" },
-        { image: "/images/projects/capaco/naruzhnaya-reklama.png", width: 1156, height: 677, alt: "Наружная реклама" },
+        { image: "/images/projects/capaco/naruzhnye-nositeli.png", width: 1156, height: 677, alt: "Наружная реклама" },
         { image: "/images/projects/capaco/merch.png", width: 1156, height: 667, alt: "Мерч" },
       ],
     },
@@ -138,12 +138,12 @@ export const PROJECTS: Project[] = [
       descriptionRight: "Дизайн KV и баннеров, ресайзы, генерация фотоматериалов",
       sections: [
         { image: "/images/projects/rox/kv-diko-krutoy.png", width: 1158, height: 651, alt: "Ключевой визуал «Дико крутой»" },
-        { image: "/images/projects/rox/bannery-diko.png", width: 1157, height: 656, alt: "Баннеры «Дико крутой», «выгодное», «красивый», «комфортный»" },
+        { image: "/images/projects/rox/kv-diko-seriya.png", width: 1157, height: 656, alt: "Баннеры «Дико крутой», «выгодное», «красивый», «комфортный»" },
         { image: "/images/projects/rox/storis-adaptatsii.png", width: 1157, height: 567, alt: "Сторис-адаптации баннеров" },
-        { image: "/images/projects/rox/banner-diko-krasivyy.png", width: 1162, height: 654, alt: "Баннер «Дико красивый»" },
-        { image: "/images/projects/rox/banner-diko-komfortnyy.png", width: 1162, height: 654, alt: "Баннер «Дико комфортный»" },
-        { image: "/images/projects/rox/banner-diko-vygodnyy.png", width: 1162, height: 654, alt: "Баннер «Дико выгодный в апреле»" },
-        { image: "/images/projects/rox/banner-s-tsenoy.png", width: 1162, height: 654, alt: "Баннер с ценой" },
+        { image: "/images/projects/rox/kv-diko-krasivyy.png", width: 1162, height: 654, alt: "Баннер «Дико красивый»" },
+        { image: "/images/projects/rox/kv-diko-komfortnyy.png", width: 1162, height: 654, alt: "Баннер «Дико комфортный»" },
+        { image: "/images/projects/rox/kv-diko-vygodnyy.png", width: 1162, height: 654, alt: "Баннер «Дико выгодный в апреле»" },
+        { image: "/images/projects/rox/kv-s-tsenoy.png", width: 1162, height: 654, alt: "Баннер с ценой" },
       ],
     },
   },
@@ -177,13 +177,13 @@ export const PROJECTS: Project[] = [
     caseContent: {
       narrators: true,
       descriptionLeft:
-        "Обновили подход к вёрстке статичных и анимационных макетов для традиционных размещений. Сделали подачу офферов более заметной и современно переосмыслили композицию макетов.\n\nУлучшили анимацию: для коротких форматов сделали её сдержаннее, а для длинных — более динамичной. Добавили больше креативных и юмористических решений в визуальную подачу.",
+        "Обновили подход к вёрстке статичных и анимационных макетов для традиционных размещений. Сделали подачу офферов более заметной и современно переосмыслили композицию макетов. Улучшили анимацию: для коротких форматов сделали её сдержаннее, а для длинных — более динамичной. Добавили больше креативных и юмористических решений в визуальную подачу.",
       sections: [
-        { image: "/images/projects/sovkombank/bannery-10-mesyatsev-halva.png", width: 1181, height: 609, alt: "Баннеры «10 месяцев без %» и «Халва»" },
-        { image: "/images/projects/sovkombank/banner-10-mesyatsev-krupno.png", width: 1160, height: 580, alt: "Баннер «10 месяцев без %» — крупный формат" },
+        { image: "/images/projects/sovkombank/kv-10-mesyatsev-i-halva.png", width: 1161, height: 591, alt: "Баннеры «10 месяцев без %» и «Халва»" },
+        { image: "/images/projects/sovkombank/kv-10-mesyatsev-krupno.png", width: 1160, height: 580, alt: "Баннер «10 месяцев без %» — крупный формат" },
         { image: "/images/projects/sovkombank/wealth-management-kv1.png", width: 1161, height: 579, alt: "Sovcombank Wealth Management — «Благосостояние, создающее свободу»" },
         { image: "/images/projects/sovkombank/wealth-management-kv2.png", width: 1161, height: 580, alt: "Sovcombank Wealth Management — вариант с автомобилем в пустыне" },
-        { image: "/images/projects/sovkombank/banner-halva-rassrochka.png", width: 1160, height: 580, alt: "Баннер «Халва» — рассрочка 24 месяца" },
+        { image: "/images/projects/sovkombank/kv-halva-rassrochka.png", width: 1160, height: 580, alt: "Баннер «Халва» — рассрочка 24 месяца" },
       ],
     },
   },
