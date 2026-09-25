@@ -97,21 +97,32 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
           </div>
 
           <div className={styles.sections}>
-            {caseContent.sections.map((section) => (
-              <Image
-                key={section.image}
-                src={section.image}
-                alt={section.alt}
-                width={section.width}
-                height={section.height}
-                className={
-                  section.groupStart
-                    ? `${styles.sectionImage} ${styles.groupStart}`
-                    : styles.sectionImage
-                }
-                style={{ width: sectionWidth(section.width) }}
-              />
-            ))}
+            {caseContent.sections.map((section) =>
+              "heading" in section ? (
+                <section key={section.heading} className={styles.textBlock}>
+                  <h2>{section.heading}</h2>
+                  <div className={styles.introCol}>
+                    {section.text.split("\n\n").map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </section>
+              ) : (
+                <Image
+                  key={section.image}
+                  src={section.image}
+                  alt={section.alt}
+                  width={section.width}
+                  height={section.height}
+                  className={
+                    section.groupStart
+                      ? `${styles.sectionImage} ${styles.groupStart}`
+                      : styles.sectionImage
+                  }
+                  style={{ width: sectionWidth(section.width) }}
+                />
+              ),
+            )}
           </div>
         </>
       ) : (

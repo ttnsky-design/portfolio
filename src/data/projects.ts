@@ -1,4 +1,4 @@
-export type ProjectCaseSection = {
+export type ProjectCaseImage = {
   image: string;
   width: number;
   height: number;
@@ -6,6 +6,15 @@ export type ProjectCaseSection = {
   /** Starts a new group of images: gets a larger gap above it. */
   groupStart?: boolean;
 };
+
+/** A subheading with its description between images, e.g. a second part of the case. */
+export type ProjectCaseTextBlock = {
+  heading: string;
+  /** Paragraphs separated by a blank line. */
+  text: string;
+};
+
+export type ProjectCaseSection = ProjectCaseImage | ProjectCaseTextBlock;
 
 export type ProjectCaseContent = {
   /** Heading on the case page when it differs from the card title. */
@@ -219,8 +228,14 @@ export const PROJECTS: Project[] = [
       narrators: true,
       descriptionLeft:
         "СтриММур — онлайн-стрим из котодома фонда «Ника» на площадках VK Видео и VK Play Live, объединивший заботу о животных, развлечения и выступления популярных артистов.",
+      descriptionRight: "Дизайн KV, логотипа, заставок, материалов для стрима",
       sections: [
-        { image: "/images/projects/vk-strimmur/strimmur-programma-efirov.png", width: 1222, height: 2717, alt: "СтриММур — афиша и программа эфиров" },
+        { image: "/images/projects/vk-strimmur/strimmur-kv-i-programma.png", width: 1165, height: 1955, alt: "СтриММур — афиша и программа эфиров" },
+        { image: "/images/projects/vk-strimmur/strimmur-foto-so-strima.png", width: 1222, height: 722, alt: "СтриММур — кадры со стрима" },
+        {
+          heading: "Мамин лайк",
+          text: "Дизайн носителей в фирменном стиле, допечатная подготовка\n\nСоздали инфоповод на день Матери. Сделали большие мягкие сердца, поставили их в центре Москвы и Санкт-Петербурга, предлагали людям с ними сфотографироваться, раздавали тематические стикеры, а также обеспечили подсветку в социальных сетях инфлюенсеров.",
+        },
         { image: "/images/projects/vk-strimmur/mamin-layk-serdtse.png", width: 1160, height: 3027, alt: "Мамин лайк — активация «Сердце»" },
       ],
     },
