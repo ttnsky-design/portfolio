@@ -1,39 +1,28 @@
 .page {
   padding: 20px 140px 100px;
+  font-size: 20px;
 }
 
+/* One shared grid so section headings in both columns sit on the same row. */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  max-width: 1440px;
+  column-gap: 20px;
+  row-gap: 96px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
-.leftColumn,
-.rightColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
+.intro,
+.stack,
+.section {
+  max-width: 484px;
 }
 
-.experienceSection {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  max-width: 1440px;
-  margin: 64px auto 0;
-}
-
-.experienceSection h2 {
-  font-size: 28px;
+.grid h2 {
+  font-size: 32px;
   font-weight: 700;
-}
-
-.experienceGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  line-height: 37px;
 }
 
 .intro {
@@ -42,79 +31,92 @@
   gap: 32px;
 }
 
+.introHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .name {
-  font-size: 56px;
+  font-size: 68px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 0.9;
   white-space: pre-line;
 }
 
 .role {
-  font-size: 20px;
+  line-height: 1.1;
 }
 
 .keyProjects {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 20px;
+  gap: 16px;
+  line-height: 1.1;
 }
 
-.sectionLabel {
+.portrait {
+  width: 100%;
+  max-width: 387px;
+  height: auto;
+  object-fit: cover;
+}
+
+.bold {
   font-weight: 700;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
 }
 
-.section h2 {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.educationEntry,
-.courseEntry {
+.entry {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 18px;
+  gap: 10px;
 }
 
 .coursesList {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
-.experienceRole {
-  font-weight: 700;
+/* Spans both columns; subgrid keeps its cards on the page columns. */
+.experienceSection {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  row-gap: 46px;
 }
 
-.experienceStack {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.experienceSection h2 {
+  grid-column: 1 / -1;
 }
 
 .experienceCard {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 18px;
+  gap: 16px;
 }
 
 .experienceHeader {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin-bottom: 4px;
+  gap: 10px;
+  margin-bottom: 16px;
 }
 
 .experienceCompany {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
 }
 
@@ -125,20 +127,19 @@
 .bulletList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-left: 20px;
-  font-size: 18px;
+  gap: 10px;
+  line-height: 1.1;
 }
 
+/* Markers hang outside so item text lines up with the column edge, as in the mockup. */
 .bulletList li {
-  list-style: disc;
+  list-style: disc outside;
 }
 
-.portrait {
-  width: 100%;
-  max-width: 387px;
-  height: auto;
-  object-fit: cover;
+.skillsList {
+  gap: 20px;
+  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
 @media (max-width: 1024px) {
@@ -148,25 +149,38 @@
 
   .grid {
     grid-template-columns: 1fr;
-    gap: 56px;
+    row-gap: 56px;
   }
 
-  .experienceGrid {
-    grid-template-columns: 1fr;
-    gap: 56px;
+  .intro,
+  .stack,
+  .section {
+    max-width: none;
   }
 
-  .experienceSection {
-    margin-top: 56px;
+  .portrait {
+    order: -1;
+    justify-self: center;
   }
 }
 
 @media (max-width: 640px) {
   .page {
     padding: 16px 24px 48px;
+    font-size: 18px;
+  }
+
+  .grid h2,
+  .experienceCompany {
+    font-size: 28px;
+    line-height: 1.2;
   }
 
   .name {
-    font-size: 40px;
+    font-size: 44px;
+  }
+
+  .bulletList {
+    padding-left: 20px;
   }
 }

@@ -103,7 +103,7 @@ function ExperienceCard({
         {type && <span className={styles.experienceMuted}>{type}</span>}
         <span className={styles.experienceMuted}>{period}</span>
       </div>
-      {role && <span className={styles.experienceRole}>{role}</span>}
+      {role && <span className={styles.bold}>{role}</span>}
       <ul className={styles.bulletList}>
         {bullets.map((bullet) => (
           <li key={bullet}>{bullet}</li>
@@ -117,24 +117,34 @@ export default function AboutPage() {
   return (
     <main className={styles.page}>
       <div className={styles.grid}>
-        <div className={styles.leftColumn}>
-          <div className={styles.intro}>
+        <div className={styles.intro}>
+          <div className={styles.introHeading}>
             <h1 className={styles.name}>{OWNER_NAME}</h1>
             <p className={styles.role}>{OWNER_ROLE}</p>
-            <div className={styles.keyProjects}>
-              <span className={styles.sectionLabel}>Ключевые проекты:</span>
-              <p>
-                Yango, Яндекс, Магнит, VK, Пик, SberDevices, Дикси, Rox, Мегафон, Ростовский Кремль
-                и др.
-              </p>
-            </div>
           </div>
+          <div className={styles.keyProjects}>
+            <span className={styles.bold}>Ключевые проекты:</span>
+            <p>
+              Yango, Яндекс, Магнит, VK, Пик, SberDevices, Дикси, Rox, Мегафон, Ростовский Кремль
+              и др.
+            </p>
+          </div>
+        </div>
 
+        <Image
+          src="/images/about/portrait.png"
+          alt={OWNER_NAME}
+          width={387}
+          height={294}
+          className={styles.portrait}
+        />
+
+        <div className={styles.stack}>
           <section className={styles.section}>
             <h2>Образование</h2>
-            <div className={styles.educationEntry}>
-              <span className={styles.experienceRole}>
-                Нижегородский государственный архитектурно-строительный университет, Нижний Новгород
+            <div className={styles.entry}>
+              <span className={styles.bold}>
+                Нижегородский государственный архитектурно-строительный университет, Нижний Новгород
               </span>
               <span>Факультет архитектуры и дизайна Художественная Культура</span>
             </div>
@@ -144,51 +154,38 @@ export default function AboutPage() {
             <h2>Курсы</h2>
             <div className={styles.coursesList}>
               {COURSES.map((course) => (
-                <div key={course.name} className={styles.courseEntry}>
-                  <span className={styles.experienceRole}>{course.name}</span>
+                <div key={course.name} className={styles.entry}>
+                  <span className={styles.bold}>{course.name}</span>
                   <span>{course.info}</span>
                 </div>
               ))}
             </div>
           </section>
-
         </div>
 
-        <div className={styles.rightColumn}>
-          <Image
-            src="/images/about/portrait.png"
-            alt={OWNER_NAME}
-            width={387}
-            height={294}
-            className={styles.portrait}
-          />
+        <section className={styles.section}>
+          <h2>Skill Set</h2>
+          <ul className={`${styles.bulletList} ${styles.skillsList}`}>
+            {SKILLS.map((skill) => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </section>
 
-          <section className={styles.section}>
-            <h2>Skill Set</h2>
-            <ul className={styles.bulletList}>
-              {SKILLS.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </section>
-        </div>
-      </div>
-
-      <section className={styles.experienceSection}>
-        <h2>Опыт работы</h2>
-        <div className={styles.experienceGrid}>
-          <div className={styles.experienceStack}>
+        <section className={styles.experienceSection}>
+          <h2>Опыт работы</h2>
+          <div className={styles.stack}>
             {EXPERIENCE_LEFT.map((job) => (
               <ExperienceCard key={job.company} {...job} />
             ))}
           </div>
-          <div className={styles.experienceStack}>
+          <div className={styles.stack}>
             {EXPERIENCE_RIGHT.map((job) => (
               <ExperienceCard key={job.company} {...job} />
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 }
