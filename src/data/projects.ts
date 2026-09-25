@@ -3,6 +3,8 @@ export type ProjectCaseSection = {
   width: number;
   height: number;
   alt: string;
+  /** Starts a new group of images: gets a larger gap above it. */
+  groupStart?: boolean;
 };
 
 export type ProjectCaseContent = {
@@ -189,7 +191,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "pik",
-    title: "Пик",
+    title: "ПИК",
     category: "спецпроекты",
     cardImage: "/images/home/pik.png",
     cardWidth: 374,
@@ -198,10 +200,11 @@ export const PROJECTS: Project[] = [
       narrators: true,
       descriptionLeft:
         "(Летние каникулы, зимние каникулы, каток, открытие школы и др.)\n\nСобытия для жителей жилых комплексов ПИК, которые объединяют соседей, создают поводы для общения и делают повседневную жизнь в районе насыщеннее.",
+      descriptionRight: "Дизайн KV, носителей, предпечатная подготовка, визуализация локаций",
       sections: [
         { image: "/images/projects/pik/vse-ustroeno-ustraivaytes.png", width: 1162, height: 3087, alt: "Летний ивент «Всё устроено — устраивайтесь»" },
-        { image: "/images/projects/pik/pik-kanikuly.png", width: 1164, height: 2289, alt: "Ивент «Пик каникулы»" },
-        { image: "/images/projects/pik/istoriya-v-kazhdoy-detali.png", width: 1160, height: 3010, alt: "Ивент «История в каждой детали» — открытие школы" },
+        { image: "/images/projects/pik/pik-kanikuly.png", width: 1164, height: 2289, alt: "Ивент «ПИК каникулы»", groupStart: true },
+        { image: "/images/projects/pik/istoriya-v-kazhdoy-detali.png", width: 1160, height: 3010, alt: "Ивент «История в каждой детали» — открытие школы", groupStart: true },
       ],
     },
   },

@@ -5,7 +5,7 @@ export const OWNER_ROLE = "графический дизайнер";
 
 export const SITE_NAME = `${OWNER_NAME} — ${OWNER_ROLE}`;
 export const SITE_DESCRIPTION =
-  "Портфолио графического дизайнера: айдентика, event и digital-кампании для Yango, Яндекса, VK, Пика и Совкомбанка.";
+  "Портфолио графического дизайнера: айдентика, event и digital-кампании для Yango, Яндекса, VK, ПИК и Совкомбанка.";
 
 export const CONTACTS = {
   phone: "+7 904 795 57 93",

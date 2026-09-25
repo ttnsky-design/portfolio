@@ -104,7 +104,11 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
                 alt={section.alt}
                 width={section.width}
                 height={section.height}
-                className={styles.sectionImage}
+                className={
+                  section.groupStart
+                    ? `${styles.sectionImage} ${styles.groupStart}`
+                    : styles.sectionImage
+                }
                 style={{ width: sectionWidth(section.width) }}
               />
             ))}

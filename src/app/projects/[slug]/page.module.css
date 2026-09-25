@@ -57,6 +57,11 @@
   height: auto;
 }
 
+/* 40px flex gap + 60px = 100px between image groups. */
+.groupStart {
+  margin-top: 60px;
+}
+
 .stub {
   display: flex;
   flex-direction: column;

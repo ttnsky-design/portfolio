@@ -125,7 +125,7 @@ export default function AboutPage() {
           <div className={styles.keyProjects}>
             <span className={styles.bold}>Ключевые проекты:</span>
             <p>
-              Yango, Яндекс, Магнит, VK, Пик, SberDevices, Дикси, Rox, Мегафон, Ростовский Кремль
+              Yango, Яндекс, Магнит, VK, ПИК, SberDevices, Дикси, Rox, Мегафон, Ростовский Кремль
               и др.
             </p>
           </div>
