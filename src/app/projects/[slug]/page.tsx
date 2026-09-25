@@ -7,6 +7,14 @@ import { OWNER_NAME } from "@/config/site";
 import { getProjectBySlug, PROJECTS } from "@/data/projects";
 import styles from "./page.module.css";
 
+/** Width of the content column in the Figma mockups. */
+const COLUMN_WIDTH = 1160;
+
+/** Images narrower than the column keep their mockup width, centred; wider ones are capped at the column. */
+function sectionWidth(width: number) {
+  return `${(Math.min(width, COLUMN_WIDTH) / COLUMN_WIDTH) * 100}%`;
+}
+
 export function generateStaticParams() {
   return PROJECTS.map((project) => ({ slug: project.slug }));
 }
@@ -97,6 +105,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
                 width={section.width}
                 height={section.height}
                 className={styles.sectionImage}
+                style={{ width: sectionWidth(section.width) }}
               />
             ))}
           </div>
