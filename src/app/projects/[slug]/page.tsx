@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import NarratorsBadge from "@/components/NarratorsBadge";
 import { OWNER_NAME } from "@/config/site";
 import { getProjectBySlug, PROJECTS } from "@/data/projects";
 import styles from "./page.module.css";
@@ -41,7 +42,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
     <main className={styles.page}>
       <div className={styles.header}>
         <h1>{project.title}</h1>
-        {caseContent?.badge && <span className={styles.badge}>{caseContent.badge}</span>}
+        {caseContent?.narrators && <NarratorsBadge />}
       </div>
 
       {caseContent ? (

@@ -6,7 +6,7 @@ export type ProjectCaseSection = {
 };
 
 export type ProjectCaseContent = {
-  badge?: string;
+  narrators?: boolean;
   descriptionLeft: string;
   descriptionRight?: string;
   caseUrl?: string;
@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Ростовский кремль — один из важнейших памятников древнерусского зодчества, задуманный митрополитом Ионией Сысоевичем как земное отражение Небесного града.\n\nПроект был направлен на переосмысление исторического наследия кремля и его воплощение в современной, гибкой визуальной системе.",
       descriptionRight:
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Вечеринка для агентств, которые работают с Яндекс.Рекламой.\n\nДизайн носителей в фирменном стиле, визуализация, предпечатная подготовка.",
       sections: [
@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "С нуля упаковали бренд производителя пластиковых крышек.\n\nНовый завод в ОАЭ получил лаконичный нейм CAPACO: CAps PAckaging COmpany. Доступно носителям любого языка.\n\nМинимализм, модульность и промышленная эстетика — основа визуала нового бренда. Приземистый гротеск, строгая сетка и геометрия символа отражают производственную экспертизу компании. Продумали все точки контакта — от самой упаковки до транспорта, который её развозит и цифровых интерфейсов.",
       caseUrl: "https://dprofile.ru/case/149869/capaco",
@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Запустили коллаборацию Дикси × Брат: сделали кей вижуал, рассказывающий о конкурсе и мерче, разработали оформление флагманского магазина.\n\nВыбрали VHS-эстетику для визуалов и создали несколько интересных локаций.",
       sections: [
@@ -127,7 +127,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Создали образ бренда, который считывает целевая аудитория. Сформировали рамку слоганов на основе «дико», сделали KV и ресайзы.",
       sections: [
@@ -149,7 +149,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Разработали айдентику для международного фестиваля искусств с акцентом на классическую музыку. Фестиваль организовывается при поддержке Альфа-Банка и Правительства Нижегородской области.\n\nЗабрендировали десятки поверхностей фестиваля, а на всех городских экранах выводились индивидуальные афиши событий.",
       sections: [
@@ -169,7 +169,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Обновили подход к вёрстке статичных и анимационных макетов для традиционных размещений. Сделали подачу офферов более заметной и современно переосмыслили композицию макетов.\n\nУлучшили анимацию: для коротких форматов сделали её сдержаннее, а для длинных — более динамичной. Добавили больше креативных и юмористических решений в визуальную подачу.",
       sections: [
@@ -189,7 +189,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "(Летние каникулы, зимние каникулы, каток, открытие школы и др.)\n\nСобытия для жителей жилых комплексов ПИК, которые объединяют соседей, создают поводы для общения и делают повседневную жизнь в районе насыщеннее.",
       sections: [
@@ -207,7 +207,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "СтриММур — онлайн-стрим из котодома фонда «Ника» на площадках VK Видео и VK Play Live, объединивший заботу о животных, развлечения и выступления популярных артистов.",
       sections: [
@@ -224,7 +224,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Креативная концепция для продукта MacCoffee Cappuccino di Torino\n\nТвоё время — это время, которое ты можешь посвятить только себе, своему удовольствию, настроению и перезарядке. В каждом дне можно найти время, чтобы позаниматься тем, что любишь и насладиться вкусным кофе, которое идеально дополнит этот момент наедине с собой.\n\nНаши герои занимаются любимыми делами и проводят me-time с чашечкой ароматного Сappuccino di torino.\n\nВ визуалах используем теплую пленочную стилистику, передаем атмосферу спокойствия и уюта.",
       sections: [
@@ -246,7 +246,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Запустили новую рекламную кампанию, которая выделила бренд авторских туров на фоне конкурентов и оставила эмоциональный отклик.\n\nГлавный образ кампании — лицо человека, его эмоция: он разделяет момент, растворяется в нём. Весь контент был сделан с помощью нейросетей.",
       sections: [
@@ -291,7 +291,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      badge: "× narrators",
+      narrators: true,
       descriptionLeft:
         "Фирменный стиль для нового жилого комплекса\n\nСуть бренда: это новый формат городского жителя — новая техническая интеллигенция, выбирающая центр не ради статуса, а ради точности, качества и спокойной, защищённой жизни. Центр, собранный как проект. Центр, созданный для будущего.",
       sections: [
