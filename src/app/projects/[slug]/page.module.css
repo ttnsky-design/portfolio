@@ -38,6 +38,11 @@
   gap: 30px;
 }
 
+/* A single "\n" inside a paragraph is a line break, as in the mockups. */
+.introCol p {
+  white-space: pre-line;
+}
+
 .caseLink {
   align-self: flex-start;
   text-decoration: underline;
