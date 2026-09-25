@@ -135,6 +135,7 @@ export const PROJECTS: Project[] = [
       narrators: true,
       descriptionLeft:
         "Создали образ бренда, который считывает целевая аудитория. Сформировали рамку слоганов на основе «дико», сделали KV и ресайзы.",
+      descriptionRight: "Дизайн KV и баннеров, ресайзы, генерация фотоматериалов",
       sections: [
         { image: "/images/projects/rox/kv-diko-krutoy.png", width: 1158, height: 651, alt: "Ключевой визуал «Дико крутой»" },
         { image: "/images/projects/rox/bannery-diko.png", width: 1157, height: 656, alt: "Баннеры «Дико крутой», «выгодное», «красивый», «комфортный»" },
