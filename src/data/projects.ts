@@ -255,6 +255,8 @@ export const PROJECTS: Project[] = [
       narrators: true,
       descriptionLeft:
         "Запустили новую рекламную кампанию, которая выделила бренд авторских туров на фоне конкурентов и оставила эмоциональный отклик.\n\nГлавный образ кампании — лицо человека, его эмоция: он разделяет момент, растворяется в нём. Весь контент был сделан с помощью нейросетей.",
+      descriptionRight:
+        "Дизайн KV и баннеров, ресайзы, генерация фотоматериалов, раскадровка для видеоролика",
       sections: [
         { image: "/images/projects/youtravel-me/kv-menyaet-navsegda.png", width: 1156, height: 650, alt: "KV «Тот самый момент… когда отпуск меняет навсегда»" },
         { image: "/images/projects/youtravel-me/kv-nastoyashchiy.png", width: 1158, height: 482, alt: "KV «Тот самый момент… когда отпуск настоящий»" },
