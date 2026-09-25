@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
       caseUrl: "https://dprofile.ru/case/149869/capaco",
       sections: [
         { image: "/images/projects/capaco/zagolovok.png", width: 1160, height: 653, alt: "Заголовок проекта" },
-        { image: "/images/projects/capaco/brendbuk.png", width: 1188, height: 668, alt: "Брендбук" },
+        { image: "/images/projects/capaco/brendbuk.png", width: 1159, height: 638, alt: "Брендбук" },
         { image: "/images/projects/capaco/buklet-i-identika.png", width: 1156, height: 657, alt: "Буклет и айдентика" },
         { image: "/images/projects/capaco/sayt.png", width: 1156, height: 650, alt: "Сайт и цифровые интерфейсы" },
         { image: "/images/projects/capaco/upakovka.png", width: 1152, height: 833, alt: "Упаковка" },
