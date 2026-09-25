@@ -75,13 +75,6 @@
   color: var(--foreground-muted);
 }
 
-.backLink {
-  display: block;
-  text-align: center;
-  margin-top: 64px;
-  font-size: 16px;
-}
-
 @media (max-width: 900px) {
   .intro {
     grid-template-columns: 1fr;

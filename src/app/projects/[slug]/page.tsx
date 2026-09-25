@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import NarratorsBadge from "@/components/NarratorsBadge";
+import ProjectNav from "@/components/ProjectNav";
 import { OWNER_NAME } from "@/config/site";
 import { getProjectBySlug, PROJECTS } from "@/data/projects";
 import styles from "./page.module.css";
@@ -115,9 +115,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
         </div>
       )}
 
-      <Link href="/" className={styles.backLink}>
-        back to projects
-      </Link>
+      <ProjectNav slug={project.slug} />
     </main>
   );
 }

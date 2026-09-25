@@ -1,0 +1,42 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+  margin-top: 64px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #505050;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  white-space: nowrap;
+}
+
+.link:hover {
+  color: var(--foreground);
+}
+
+.arrow {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .nav {
+    gap: 16px;
+    font-size: 16px;
+  }
+
+  .link {
+    gap: 8px;
+  }
+
+  .arrow {
+    width: 8px;
+    height: 13px;
+  }
+}

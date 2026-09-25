@@ -356,3 +356,13 @@ export const PROJECTS: Project[] = [
 export function getProjectBySlug(slug: string): Project | undefined {
   return PROJECTS.find((project) => project.slug === slug);
 }
+
+/** Neighbouring projects in list order, wrapping around at both ends. */
+export function getAdjacentProjects(slug: string): { previous: Project; next: Project } {
+  const index = PROJECTS.findIndex((project) => project.slug === slug);
+  const count = PROJECTS.length;
+  return {
+    previous: PROJECTS[(index - 1 + count) % count],
+    next: PROJECTS[(index + 1) % count],
+  };
+}
