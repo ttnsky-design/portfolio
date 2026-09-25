@@ -23,7 +23,8 @@
 .intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 30px;
   margin-bottom: 100px;
   font-size: 15px;
   line-height: 1;
@@ -38,6 +39,11 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+/* Keeps the lead and the left description in the first column, so the right column lines up with the latter. */
+.introLeft {
+  grid-column: 1;
 }
 
 /* A single "\n" inside a paragraph is a line break, as in the mockups. */

@@ -15,9 +15,16 @@ function sectionWidth(width: number) {
   return `${(Math.min(width, COLUMN_WIDTH) / COLUMN_WIDTH) * 100}%`;
 }
 
+/** Renders **bold** fragments inside a line of description text. */
+function Inline({ text }: { text: string }) {
+  return text
+    .split(/\*\*(.+?)\*\*/)
+    .map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part));
+}
+
 /**
- * Renders description text: blank lines separate paragraphs, and a paragraph
- * whose every line starts with "- " becomes a bulleted list.
+ * Renders description text: blank lines separate paragraphs, a paragraph
+ * whose every line starts with "- " becomes a bulleted list, and **text** is bold.
  */
 function Description({ text }: { text: string }) {
   return text.split("\n\n").map((block) => {
@@ -26,12 +33,18 @@ function Description({ text }: { text: string }) {
       return (
         <ul key={block} className={styles.list}>
           {lines.map((line) => (
-            <li key={line}>{line.slice(2)}</li>
+            <li key={line}>
+              <Inline text={line.slice(2)} />
+            </li>
           ))}
         </ul>
       );
     }
-    return <p key={block}>{block}</p>;
+    return (
+      <p key={block}>
+        <Inline text={block} />
+      </p>
+    );
   });
 }
 
@@ -82,7 +95,12 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
                 : `${styles.intro} ${styles.introSingle}`
             }
           >
-            <div className={styles.introCol}>
+            {caseContent.descriptionLead && (
+              <div className={`${styles.introCol} ${styles.introLeft}`}>
+                <Description text={caseContent.descriptionLead} />
+              </div>
+            )}
+            <div className={`${styles.introCol} ${styles.introLeft}`}>
               <Description text={caseContent.descriptionLeft} />
               {!caseContent.descriptionRight && caseContent.caseUrl && (
                 <a
@@ -114,9 +132,9 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
 
           <div className={styles.sections}>
             {caseContent.sections.map((section) =>
-              "heading" in section ? (
-                <section key={section.heading} className={styles.textBlock}>
-                  <h2>{section.heading}</h2>
+              "text" in section ? (
+                <section key={section.text} className={styles.textBlock}>
+                  {section.heading && <h2>{section.heading}</h2>}
                   <div className={styles.introCol}>
                     <Description text={section.text} />
                   </div>

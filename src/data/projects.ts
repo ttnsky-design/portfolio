@@ -7,9 +7,13 @@ export type ProjectCaseImage = {
   groupStart?: boolean;
 };
 
-/** A subheading with its description between images, e.g. a second part of the case. */
+/**
+ * Text between images: a subheading on the left with its description on the
+ * right (e.g. a second part of the case), or, without a heading, a caption in
+ * the left column.
+ */
 export type ProjectCaseTextBlock = {
-  heading: string;
+  heading?: string;
   /** Paragraphs separated by a blank line. */
   text: string;
 };
@@ -23,6 +27,8 @@ export type ProjectCaseContent = {
   heading?: string;
   /** Agency the project was made with, shown as a badge next to the heading. */
   agency?: Agency;
+  /** Left-column text above the two description columns; the right column starts level with descriptionLeft. */
+  descriptionLead?: string;
   descriptionLeft: string;
   descriptionRight?: string;
   caseUrl?: string;
@@ -327,8 +333,11 @@ export const PROJECTS: Project[] = [
     cardHeight: 271,
     caseContent: {
       agency: "narrators",
+      descriptionLead: "Фирменный стиль для нового жилого комплекса\n\n**Суть бренда:**",
       descriptionLeft:
-        "Фирменный стиль для нового жилого комплекса\n\nСуть бренда: это новый формат городского жителя — новая техническая интеллигенция, выбирающая центр не ради статуса, а ради точности, качества и спокойной, защищённой жизни. Центр, собранный как проект. Центр, созданный для будущего.",
+        "Это новый формат городского жителя — новая техническая интеллигенция, выбирающая центр не ради статуса, а ради точности, качества и спокойной, защищённой жизни. Центр, собранный как проект. Центр, созданный для будущего.",
+      descriptionRight:
+        "В основе фирменного стиля строгая геометрия, точная типографика, модульная сетка и конструктивные элементы. Технические акценты подчёркивают функциональность и системность бренда, а сдержанная цветовая палитра, пространство и статичные образы делают коммуникацию спокойной и уверенной.",
       sections: [
         { image: "/images/projects/grafit/logotip-tisnenie.png", width: 1160, height: 653, alt: "Логотип, тиснение" },
         { image: "/images/projects/grafit/billboard-start-prodazh.png", width: 1160, height: 653, alt: "Билборд «Старт продаж»" },
@@ -374,14 +383,15 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      descriptionLeft: "Key Visuals, не вошедшие в проекты.",
+      descriptionLeft: "Key Visuals, не вошедшие в проекты",
       sections: [
         { image: "/images/projects/random-projects/yandex-27-big-birthday-mashup.png", width: 1160, height: 653, alt: "Yandex 27 — Big Birthday Mashup KV" },
         { image: "/images/projects/random-projects/sberdevices-na-svyazi.png", width: 1160, height: 653, alt: "SberDevices — «На связи» KV" },
         { image: "/images/projects/random-projects/sberdevices-trendorium.png", width: 1159, height: 652, alt: "SberDevices — «Трендориум» KV" },
         { image: "/images/projects/random-projects/sberdevices-flows.png", width: 1161, height: 653, alt: "SberDevices — «Flows» KV" },
-        { image: "/images/projects/random-projects/belaya-dacha-v-poryadke-ovoshchey.png", width: 1158, height: 651, alt: "Белая Дача — «В порядке овощей»" },
-        { image: "/images/projects/random-projects/tatneft-kv-prilozheniya.png", width: 1159, height: 652, alt: "Татнефть — KV мобильного приложения" },
+        { image: "/images/projects/random-projects/tatneft-kv-prilozheniya.png", width: 1158, height: 651, alt: "Татнефть — KV мобильного приложения «Зелёный свет вкусным скидкам»" },
+        { image: "/images/projects/random-projects/belaya-dacha-v-poryadke-ovoshchey.png", width: 1159, height: 652, alt: "Белая Дача — «В порядке овощей»" },
+        { text: "Presentation" },
         { image: "/images/projects/random-projects/prezentatsiya-mediastrategiya.png", width: 1156, height: 496, alt: "Презентация — медиастратегия" },
       ],
     },
