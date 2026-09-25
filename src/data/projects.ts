@@ -16,10 +16,13 @@ export type ProjectCaseTextBlock = {
 
 export type ProjectCaseSection = ProjectCaseImage | ProjectCaseTextBlock;
 
+export type Agency = "narrators" | "superdudes";
+
 export type ProjectCaseContent = {
   /** Heading on the case page when it differs from the card title. */
   heading?: string;
-  narrators?: boolean;
+  /** Agency the project was made with, shown as a badge next to the heading. */
+  agency?: Agency;
   descriptionLeft: string;
   descriptionRight?: string;
   caseUrl?: string;
@@ -45,7 +48,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Ростовский кремль — один из важнейших памятников древнерусского зодчества, задуманный митрополитом Ионией Сысоевичем как земное отражение Небесного града.\n\nПроект был направлен на переосмысление исторического наследия кремля и его воплощение в современной, гибкой визуальной системе.",
       descriptionRight:
@@ -75,7 +78,7 @@ export const PROJECTS: Project[] = [
     cardHeight: 271,
     caseContent: {
       heading: "AGENCY FRIENDS",
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Вечеринка для агентств, которые работают с Яндекс.Рекламой\n\nДизайн носителей в фирменном стиле, визуализация, предпечатная подготовка",
       sections: [
@@ -96,7 +99,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "С нуля упаковали бренд производителя пластиковых крышек.\n\nНовый завод в ОАЭ получил лаконичный нейм CAPACO: CAps PAckaging COmpany. Доступно носителям любого языка.\n\nМинимализм, модульность и промышленная эстетика — основа визуала нового бренда. Приземистый гротеск, строгая сетка и геометрия символа отражают производственную экспертизу компании. Продумали все точки контакта — от самой упаковки до транспорта, который её развозит и цифровых интерфейсов.",
       caseUrl: "https://dprofile.ru/case/149869/capaco",
@@ -121,7 +124,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Запустили коллаборацию Дикси × Брат: сделали кей вижуал, рассказывающий о конкурсе и мерче, разработали оформление флагманского магазина.\n\nВыбрали VHS-эстетику для визуалов и создали несколько интересных локаций.",
       descriptionRight:
@@ -143,7 +146,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Создали образ бренда, который считывает целевая аудитория. Сформировали рамку слоганов на основе «дико», сделали KV и ресайзы.",
       descriptionRight: "Дизайн KV и баннеров, ресайзы, генерация фотоматериалов",
@@ -166,7 +169,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Разработали айдентику для международного фестиваля искусств с акцентом на классическую музыку. Фестиваль организовывается при поддержке Альфа-Банка и Правительства Нижегородской области.\n\nЗабрендировали десятки поверхностей фестиваля, а на всех городских экранах выводились индивидуальные афиши событий.",
       descriptionRight:
@@ -188,7 +191,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Обновили подход к вёрстке статичных и анимационных макетов для традиционных размещений. Сделали подачу офферов более заметной и современно переосмыслили композицию макетов. Улучшили анимацию: для коротких форматов сделали её сдержаннее, а для длинных — более динамичной. Добавили больше креативных и юмористических решений в визуальную подачу.",
       sections: [
@@ -208,7 +211,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "(Летние каникулы, зимние каникулы, каток, открытие школы и др.)\n\nСобытия для жителей жилых комплексов ПИК, которые объединяют соседей, создают поводы для общения и делают повседневную жизнь в районе насыщеннее.",
       descriptionRight: "Дизайн KV, носителей, предпечатная подготовка, визуализация локаций",
@@ -227,7 +230,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "СтриММур — онлайн-стрим из котодома фонда «Ника» на площадках VK Видео и VK Play Live, объединивший заботу о животных, развлечения и выступления популярных артистов.",
       descriptionRight: "Дизайн KV, логотипа, заставок, материалов для стрима",
@@ -250,7 +253,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Креативная концепция для продукта MacCoffee Cappuccino di Torino\n\nТвоё время — это время, которое ты можешь посвятить только себе, своему удовольствию, настроению и перезарядке.\nВ каждом дне можно найти время, чтобы позаниматься тем, что любишь и насладиться вкусным кофе, которое идеально дополнит этот момент наедине с собой.\n\nНаши герои занимаются любимыми делами и проводят me-time с чашечкой ароматного Сappuccino di torino.\n\nВ визуалах используем теплую пленочную стилистику, передаем атмосферу спокойствия и уюта.",
       sections: [
@@ -272,7 +275,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Запустили новую рекламную кампанию, которая выделила бренд авторских туров на фоне конкурентов и оставила эмоциональный отклик.\n\nГлавный образ кампании — лицо человека, его эмоция: он разделяет момент, растворяется в нём. Весь контент был сделан с помощью нейросетей.",
       descriptionRight:
@@ -297,17 +300,21 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
+      agency: "superdudes",
       descriptionLeft:
-        "Концепция брендированного мероприятия / запуска Yango Super App\n\nОсновная идея — соединить историческое наследие Омана и современные технологии.",
+        "Запустили мероприятие Yango Super App.\n\nОсновная идея — соединить историческое наследие Омана и современные технологии. В визуальной концепции используются:\n\n- оранжево-красная цветовая гамма;\n- традиционные оманские орнаменты;\n- зеркала как символ связи прошлого и будущего;\n- масштабные медиаэкраны и световые инсталляции;\n- интерактивные элементы, которые позволяют гостям буквально «увидеть» историю и современность рядом.",
       sections: [
         { image: "/images/projects/yango/kv-launch.png", width: 1160, height: 653, alt: "Ключевой визуал «The Launch of a New Era»" },
         { image: "/images/projects/yango/ekran-na-ploshchadke.png", width: 1160, height: 772, alt: "Диджитал-экран на площадке" },
+        { image: "/images/projects/yango/mashiny-u-dvortsa.png", width: 1157, height: 770, alt: "Брендированные автомобили Yango у площадки" },
+        { image: "/images/projects/yango/zal-s-ekranami.png", width: 1157, height: 685, alt: "Гости в зале с экранами" },
         { image: "/images/projects/yango/konvert-priglashenie.png", width: 1160, height: 464, alt: "Конверт-приглашение" },
         { image: "/images/projects/yango/tekst-priglasheniya.png", width: 1149, height: 779, alt: "Текст приглашения на арабском" },
         { image: "/images/projects/yango/vizualizatsiya-zala.png", width: 1155, height: 650, alt: "Визуализация зала мероприятия" },
         { image: "/images/projects/yango/pattern-i-siluety.png", width: 1160, height: 492, alt: "Фирменный паттерн и силуэты" },
-        { image: "/images/projects/yango/immersivniy-performans.png", width: 1158, height: 652, alt: "Иммерсивный перформанс на мероприятии" },
+        { image: "/images/projects/yango/koridor-i-gost.png", width: 1157, height: 859, alt: "Вход на площадку и гость мероприятия" },
         { image: "/images/projects/yango/menyu-i-priglashenie.png", width: 1160, height: 620, alt: "Меню и текст приглашения" },
+        { image: "/images/projects/yango/immersivniy-performans.png", width: 1158, height: 652, alt: "Иммерсивный перформанс на мероприятии" },
       ],
     },
   },
@@ -319,7 +326,7 @@ export const PROJECTS: Project[] = [
     cardWidth: 374,
     cardHeight: 271,
     caseContent: {
-      narrators: true,
+      agency: "narrators",
       descriptionLeft:
         "Фирменный стиль для нового жилого комплекса\n\nСуть бренда: это новый формат городского жителя — новая техническая интеллигенция, выбирающая центр не ради статуса, а ради точности, качества и спокойной, защищённой жизни. Центр, собранный как проект. Центр, созданный для будущего.",
       sections: [

@@ -4,12 +4,14 @@
   margin: 0 auto;
 }
 
+/* Height is the title's: agency badges sit on its baseline and overhang upwards, as in the mockups. */
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 64px;
+  height: 30px;
+  margin-bottom: 68px;
 }
 
 .header h1 {
@@ -41,6 +43,17 @@
 /* A single "\n" inside a paragraph is a line break, as in the mockups. */
 .introCol p {
   white-space: pre-line;
+}
+
+/* Markers hang outside the column, so item text lines up with paragraphs. */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.list li {
+  list-style: disc outside;
 }
 
 .caseLink {
@@ -130,6 +143,8 @@
 
   .header {
     flex-wrap: wrap;
+    align-items: center;
+    height: auto;
     margin-bottom: 40px;
   }
 }

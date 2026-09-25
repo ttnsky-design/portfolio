@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import NarratorsBadge from "@/components/NarratorsBadge";
+import AgencyBadge from "@/components/AgencyBadge";
 import ProjectNav from "@/components/ProjectNav";
 import { OWNER_NAME } from "@/config/site";
 import { getProjectBySlug, PROJECTS } from "@/data/projects";
@@ -13,6 +13,26 @@ const COLUMN_WIDTH = 1160;
 /** Images narrower than the column keep their mockup width, centred; wider ones are capped at the column. */
 function sectionWidth(width: number) {
   return `${(Math.min(width, COLUMN_WIDTH) / COLUMN_WIDTH) * 100}%`;
+}
+
+/**
+ * Renders description text: blank lines separate paragraphs, and a paragraph
+ * whose every line starts with "- " becomes a bulleted list.
+ */
+function Description({ text }: { text: string }) {
+  return text.split("\n\n").map((block) => {
+    const lines = block.split("\n");
+    if (lines.every((line) => line.startsWith("- "))) {
+      return (
+        <ul key={block} className={styles.list}>
+          {lines.map((line) => (
+            <li key={line}>{line.slice(2)}</li>
+          ))}
+        </ul>
+      );
+    }
+    return <p key={block}>{block}</p>;
+  });
 }
 
 export function generateStaticParams() {
@@ -50,7 +70,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
     <main className={styles.page}>
       <div className={styles.header}>
         <h1>{caseContent?.heading ?? project.title}</h1>
-        {caseContent?.narrators && <NarratorsBadge />}
+        {caseContent?.agency && <AgencyBadge agency={caseContent.agency} />}
       </div>
 
       {caseContent ? (
@@ -63,9 +83,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
             }
           >
             <div className={styles.introCol}>
-              {caseContent.descriptionLeft.split("\n\n").map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+              <Description text={caseContent.descriptionLeft} />
               {!caseContent.descriptionRight && caseContent.caseUrl && (
                 <a
                   className={styles.caseLink}
@@ -79,9 +97,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
             </div>
             {caseContent.descriptionRight && (
               <div className={styles.introCol}>
-                {caseContent.descriptionRight.split("\n\n").map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+                <Description text={caseContent.descriptionRight} />
                 {caseContent.caseUrl && (
                   <a
                     className={styles.caseLink}
@@ -102,9 +118,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
                 <section key={section.heading} className={styles.textBlock}>
                   <h2>{section.heading}</h2>
                   <div className={styles.introCol}>
-                    {section.text.split("\n\n").map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+                    <Description text={section.text} />
                   </div>
                 </section>
               ) : (
