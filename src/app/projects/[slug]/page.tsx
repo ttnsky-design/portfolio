@@ -5,6 +5,7 @@ import AgencyBadge from "@/components/AgencyBadge";
 import ProjectNav from "@/components/ProjectNav";
 import { OWNER_NAME } from "@/config/site";
 import { getProjectBySlug, PROJECTS } from "@/data/projects";
+import { typograph } from "@/lib/typograph";
 import styles from "./page.module.css";
 
 /** Width of the content column in the Figma mockups. */
@@ -15,9 +16,9 @@ function sectionWidth(width: number) {
   return `${(Math.min(width, COLUMN_WIDTH) / COLUMN_WIDTH) * 100}%`;
 }
 
-/** Renders **bold** fragments inside a line of description text. */
+/** Renders **bold** fragments inside a line of description text, with non-breaking spaces set. */
 function Inline({ text }: { text: string }) {
-  return text
+  return typograph(text)
     .split(/\*\*(.+?)\*\*/)
     .map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part));
 }

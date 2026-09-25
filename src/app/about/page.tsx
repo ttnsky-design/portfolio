@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { OWNER_NAME, OWNER_ROLE } from "@/config/site";
+import { typograph } from "@/lib/typograph";
 import styles from "./page.module.css";
 
 const ABOUT_TITLE = `Обо мне — ${OWNER_NAME}`;
@@ -100,13 +101,13 @@ function ExperienceCard({
     <div className={styles.experienceCard}>
       <div className={styles.experienceHeader}>
         <span className={styles.experienceCompany}>{company}</span>
-        {type && <span className={styles.experienceMuted}>{type}</span>}
+        {type && <span className={styles.experienceMuted}>{typograph(type)}</span>}
         <span className={styles.experienceMuted}>{period}</span>
       </div>
-      {role && <span className={styles.bold}>{role}</span>}
+      {role && <span className={styles.bold}>{typograph(role)}</span>}
       <ul className={styles.bulletList}>
         {bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
+          <li key={bullet}>{typograph(bullet)}</li>
         ))}
       </ul>
     </div>
@@ -120,13 +121,14 @@ export default function AboutPage() {
         <div className={styles.intro}>
           <div className={styles.introHeading}>
             <h1 className={styles.name}>{OWNER_NAME}</h1>
-            <p className={styles.role}>{OWNER_ROLE}</p>
+            <p className={styles.role}>{typograph(OWNER_ROLE)}</p>
           </div>
           <div className={styles.keyProjects}>
             <span className={styles.bold}>Ключевые проекты:</span>
             <p>
-              Yango, Яндекс, Магнит, VK, ПИК, SberDevices, Дикси, Rox, Мегафон, Ростовский Кремль
-              и др.
+              {typograph(
+                "Yango, Яндекс, Магнит, VK, ПИК, SberDevices, Дикси, Rox, Мегафон, Ростовский Кремль и др.",
+              )}
             </p>
           </div>
         </div>
@@ -144,9 +146,11 @@ export default function AboutPage() {
             <h2>Образование</h2>
             <div className={styles.entry}>
               <span className={styles.bold}>
-                Нижегородский государственный архитектурно-строительный университет, Нижний Новгород
+                {typograph(
+                  "Нижегородский государственный архитектурно-строительный университет, Нижний Новгород",
+                )}
               </span>
-              <span>Факультет архитектуры и дизайна Художественная Культура</span>
+              <span>{typograph("Факультет архитектуры и дизайна Художественная Культура")}</span>
             </div>
           </section>
 
@@ -155,8 +159,8 @@ export default function AboutPage() {
             <div className={styles.coursesList}>
               {COURSES.map((course) => (
                 <div key={course.name} className={styles.entry}>
-                  <span className={styles.bold}>{course.name}</span>
-                  <span>{course.info}</span>
+                  <span className={styles.bold}>{typograph(course.name)}</span>
+                  <span>{typograph(course.info)}</span>
                 </div>
               ))}
             </div>
@@ -167,7 +171,7 @@ export default function AboutPage() {
           <h2>Skill Set</h2>
           <ul className={`${styles.bulletList} ${styles.skillsList}`}>
             {SKILLS.map((skill) => (
-              <li key={skill}>{skill}</li>
+              <li key={skill}>{typograph(skill)}</li>
             ))}
           </ul>
         </section>
