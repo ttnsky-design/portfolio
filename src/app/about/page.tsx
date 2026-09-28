@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { OWNER_NAME, OWNER_ROLE } from "@/config/site";
 import { typograph } from "@/lib/typograph";
 import styles from "./page.module.css";
@@ -134,7 +135,7 @@ export default function AboutPage() {
         </div>
 
         <Image
-          src="/images/about/portrait.png"
+          src={asset("/images/about/portrait.png")}
           alt={OWNER_NAME}
           width={387}
           height={294}

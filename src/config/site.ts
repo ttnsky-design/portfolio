@@ -1,4 +1,4 @@
-export const SITE_URL = "https://ttnsky.vercel.app";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ttnsky.vercel.app";
 
 export const OWNER_NAME = "Татьяна Колышкина";
 export const OWNER_ROLE = "графический дизайнер";

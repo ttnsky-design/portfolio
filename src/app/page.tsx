@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import { PROJECTS } from "@/data/projects";
 import styles from "./page.module.css";
@@ -10,7 +11,7 @@ export default function Home() {
         {PROJECTS.map((project) => (
           <Link key={project.slug} href={`/projects/${project.slug}`} className={styles.card}>
             <Image
-              src={project.cardImage}
+              src={asset(project.cardImage)}
               alt={project.title}
               width={project.cardWidth}
               height={project.cardHeight}

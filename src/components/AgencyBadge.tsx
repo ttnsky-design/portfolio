@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import type { Agency } from "@/data/projects";
 import styles from "./AgencyBadge.module.css";
 
@@ -11,7 +12,7 @@ export default function AgencyBadge({ agency }: { agency: Agency }) {
   const badge = BADGES[agency];
   return (
     <Image
-      src={badge.src}
+      src={asset(badge.src)}
       alt={badge.alt}
       width={badge.width}
       height={badge.height}

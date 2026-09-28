@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { notFound } from "next/navigation";
 import AgencyBadge from "@/components/AgencyBadge";
 import ProjectNav from "@/components/ProjectNav";
@@ -143,7 +144,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
               ) : (
                 <Image
                   key={section.image}
-                  src={section.image}
+                  src={asset(section.image)}
                   alt={section.alt}
                   width={section.width}
                   height={section.height}
@@ -161,7 +162,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
       ) : (
         <div className={styles.stub}>
           <Image
-            src={project.cardImage}
+            src={asset(project.cardImage)}
             alt={project.title}
             width={project.cardWidth}
             height={project.cardHeight}
