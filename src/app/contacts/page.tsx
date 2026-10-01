@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { CONTACTS, OWNER_NAME, SOCIAL_LINKS } from "@/config/site";
 import { typograph } from "@/lib/typograph";
 import styles from "./page.module.css";
@@ -30,7 +31,7 @@ export default function ContactsPage() {
           Behance
         </a>
         <Image
-          src="/images/contacts/portrait.jpg"
+          src={asset("/images/contacts/portrait.jpg")}
           alt={OWNER_NAME}
           width={166}
           height={213}
