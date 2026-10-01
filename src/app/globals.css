@@ -37,6 +37,8 @@ a {
   text-decoration: none;
 }
 
+/* A flex item never shrinks below its content by default, which let wide content stretch the page past the screen. */
 main {
   flex: 1;
+  min-width: 0;
 }

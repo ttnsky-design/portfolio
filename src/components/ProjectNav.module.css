@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 72px;
+  flex-wrap: wrap;
+  gap: 16px 72px;
   margin-top: 64px;
   font-size: 24px;
   font-weight: 700;
@@ -25,9 +26,16 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 1024px) {
+  .nav {
+    column-gap: 40px;
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 640px) {
   .nav {
-    gap: 16px;
+    column-gap: 24px;
     font-size: 16px;
   }
 

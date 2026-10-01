@@ -130,6 +130,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .page {
+    padding: 64px 48px 80px;
+  }
+}
+
 @media (max-width: 900px) {
   .textBlock {
     grid-template-columns: 1fr;

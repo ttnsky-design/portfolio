@@ -2,6 +2,7 @@ import Image from "next/image";
 import { asset } from "@/lib/asset";
 import Link from "next/link";
 import { PROJECTS } from "@/data/projects";
+import { typograph } from "@/lib/typograph";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -18,8 +19,8 @@ export default function Home() {
               className={styles.cardImage}
             />
             <div className={styles.cardMeta}>
-              <span className={styles.cardTitle}>{project.title}</span>
-              {project.category && <span className={styles.cardCategory}>{project.category}</span>}
+              <span className={styles.cardTitle}>{typograph(project.title)}</span>
+              {project.category && <span className={styles.cardCategory}>{typograph(project.category)}</span>}
             </div>
           </Link>
         ))}

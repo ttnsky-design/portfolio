@@ -97,3 +97,22 @@
     font-size: 30px;
   }
 }
+
+@media (max-width: 400px) {
+  .social {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 24px 40px;
+  }
+
+  /* Photo on its own row above the two links. */
+  .portrait {
+    grid-area: 1 / 1 / 2 / -1;
+    justify-self: center;
+  }
+
+  .social a {
+    grid-row: 2;
+  }
+}

@@ -84,7 +84,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
   return (
     <main className={styles.page}>
       <div className={styles.header}>
-        <h1>{caseContent?.heading ?? project.title}</h1>
+        <h1>{typograph(caseContent?.heading ?? project.title)}</h1>
         {caseContent?.agency && <AgencyBadge agency={caseContent.agency} />}
       </div>
 
@@ -136,7 +136,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
             {caseContent.sections.map((section) =>
               "text" in section ? (
                 <section key={section.text} className={styles.textBlock}>
-                  {section.heading && <h2>{section.heading}</h2>}
+                  {section.heading && <h2>{typograph(section.heading)}</h2>}
                   <div className={styles.introCol}>
                     <Description text={section.text} />
                   </div>
