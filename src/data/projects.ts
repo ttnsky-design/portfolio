@@ -168,6 +168,28 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    slug: "drop-bar",
+    title: "DROP\u00A0BAR",
+    category: "айдентика",
+    cardImage: "/images/home/drop-bar.png",
+    cardWidth: 374,
+    cardHeight: 272,
+    caseContent: {
+      descriptionLeft:
+        "DROP\u00A0BAR — московский бар со своей линейкой сидров.\nДля молодежи, которая ценит уникальный вкус и свежий дизайн.",
+      sections: [
+        { image: "/images/projects/drop-bar/logotip.png", width: 1160, height: 653, alt: "Логотип DROP BAR" },
+        { image: "/images/projects/drop-bar/banki-sidra.png", width: 1160, height: 653, alt: "Банки сидра DROP BAR" },
+        { image: "/images/projects/drop-bar/paren-s-bankami.png", width: 1160, height: 653, alt: "Гость бара с банками сидра" },
+        { image: "/images/projects/drop-bar/podstakanniki.png", width: 1160, height: 638, alt: "Подстаканники на фоне вечеринки" },
+        { image: "/images/projects/drop-bar/devushka-i-podstakanniki.png", width: 1160, height: 653, alt: "Гостья с банкой сидра и подстаканники" },
+        { image: "/images/projects/drop-bar/menyu.png", width: 1160, height: 653, alt: "Меню бара" },
+        { image: "/images/projects/drop-bar/afishi-otkrytiya.png", width: 1160, height: 638, alt: "Афиши открытия бара" },
+        { image: "/images/projects/drop-bar/korobka.png", width: 1160, height: 543, alt: "Фирменная коробка для сидра" },
+      ],
+    },
+  },
+  {
     slug: "alfa-human",
     title: "Alfa Human",
     category: "айдентика",
