@@ -14,11 +14,28 @@ export const metadata: Metadata = {
   twitter: { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION, images: ["/og/default.png"] },
 };
 
-const EXPERIENCE_LEFT = [
+const INTRO =
+  "графический дизайнер. придумываю визуальные концепции, развиваю айдентику и создаю KV, презентации и коммуникационные материалы.";
+
+const EXPERIENCE = [
+  {
+    company: "Narrators",
+    type: "креативное агентство",
+    period: "апр. 2024 — окт. 2026",
+    role: "Графический дизайнер",
+    bullets: [
+      "дизайн коммуникационных материалов и презентаций",
+      "предпечатная подготовка",
+      "разработка KV для рекламных кампаний и спецпроектов",
+      "оформление ивентов: брендирование, дизайн пространств, декораций и презентаций",
+      "создание новых визуальных концепций и фирменных стилей, написание гайдов",
+      "генерация материалов в нейросетях",
+    ],
+  },
   {
     company: "MarkWay",
     type: "маркетинговое агентство",
-    period: "май 2021 — окт. 2022",
+    period: "май 2021 — окт. 2022",
     role: "SMM, digital дизайнер",
     bullets: [
       "оформление социальных сетей (в т.ч. обработка фото, монтаж видео, отрисовка иллюстраций, создание инфографики и анимационных постов)",
@@ -31,30 +48,13 @@ const EXPERIENCE_LEFT = [
   {
     company: "Freelance",
     type: null,
-    period: "с 2020 г.",
+    period: "с 2020 г.",
     role: null,
     bullets: [
       "разработка фирменного стиля, логотипа",
       "создание макетов полиграфической продукции, рекламных баннеров",
       "разработка графического оформления социальных сетей",
       "оформление презентаций, гайдов",
-    ],
-  },
-];
-
-const EXPERIENCE_RIGHT = [
-  {
-    company: "Narrators",
-    type: "креативное агентство",
-    period: "апр. 2024 — окт. 2026",
-    role: "Графический дизайнер",
-    bullets: [
-      "дизайн коммуникационных материалов и презентаций",
-      "предпечатная подготовка",
-      "разработка KV для рекламных кампаний и спецпроектов",
-      "оформление ивентов: брендирование, дизайн пространств, декораций и презентаций",
-      "создание новых визуальных концепций и фирменных стилей, написание гайдов",
-      "генерация материалов в нейросетях: krea, mijourney, freepik, sora",
     ],
   },
 ];
@@ -69,10 +69,12 @@ const COURSES = [
     info: "2020 | ЧОУ ДПО, Графический дизайн",
   },
   {
-    name: "«Типографика и вёрстка: внимание к тексту»",
+    name: "«Типографика и вёрстка:\nвнимание к тексту»",
     info: "2023 | Свят Вишников, Типографика",
   },
 ];
+
+const TOOLS = "Инструменты: Figma, пакет Adobe, ИИ (Magnific, Midjourney, ChatGPT, Nano Banana, Krea)";
 
 const SKILLS = [
   "Разработка визуальной айдентики и фирменных элементов",
@@ -117,11 +119,11 @@ function ExperienceCard({
 export default function AboutPage() {
   return (
     <main className={styles.page}>
-      <div className={styles.grid}>
+      <div className={styles.hero}>
         <div className={styles.intro}>
           <div className={styles.introHeading}>
             <h1 className={styles.name}>{OWNER_NAME}</h1>
-            <p className={styles.role}>{typograph(OWNER_ROLE)}</p>
+            <p>{typograph(INTRO)}</p>
           </div>
           <div className={styles.keyProjects}>
             <span className={styles.bold}>Ключевые проекты:</span>
@@ -136,12 +138,33 @@ export default function AboutPage() {
         <Image
           src="/images/about/portrait.png"
           alt={OWNER_NAME}
-          width={387}
-          height={294}
+          width={295}
+          height={224}
           className={styles.portrait}
         />
+      </div>
+
+      <div className={styles.columns}>
+        <section className={styles.section}>
+          <h2>Опыт работы</h2>
+          <div className={styles.experienceList}>
+            {EXPERIENCE.map((job) => (
+              <ExperienceCard key={job.company} {...job} />
+            ))}
+          </div>
+        </section>
 
         <div className={styles.stack}>
+          <section className={styles.section}>
+            <h2>Skill Set</h2>
+            <p className={`${styles.bold} ${styles.tools}`}>{typograph(TOOLS)}</p>
+            <ul className={`${styles.bulletList} ${styles.skillsList}`}>
+              {SKILLS.map((skill) => (
+                <li key={skill}>{typograph(skill)}</li>
+              ))}
+            </ul>
+          </section>
+
           <section className={styles.section}>
             <h2>Образование</h2>
             <div className={styles.entry}>
@@ -150,7 +173,7 @@ export default function AboutPage() {
                   "Нижегородский государственный архитектурно-строительный университет, Нижний Новгород",
                 )}
               </span>
-              <span>{typograph("Факультет архитектуры и дизайна Художественная Культура")}</span>
+              <span>{typograph("Факультет архитектуры и дизайна\nХудожественная Культура")}</span>
             </div>
           </section>
 
@@ -166,29 +189,6 @@ export default function AboutPage() {
             </div>
           </section>
         </div>
-
-        <section className={styles.section}>
-          <h2>Skill Set</h2>
-          <ul className={`${styles.bulletList} ${styles.skillsList}`}>
-            {SKILLS.map((skill) => (
-              <li key={skill}>{typograph(skill)}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className={styles.experienceSection}>
-          <h2>Опыт работы</h2>
-          <div className={styles.stack}>
-            {EXPERIENCE_LEFT.map((job) => (
-              <ExperienceCard key={job.company} {...job} />
-            ))}
-          </div>
-          <div className={styles.stack}>
-            {EXPERIENCE_RIGHT.map((job) => (
-              <ExperienceCard key={job.company} {...job} />
-            ))}
-          </div>
-        </section>
       </div>
     </main>
   );

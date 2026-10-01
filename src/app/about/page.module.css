@@ -1,34 +1,26 @@
 .page {
-  padding: 20px 140px 100px;
+  padding: 40px 140px 100px;
   font-size: 20px;
+  line-height: 1;
 }
 
-/* One shared grid so section headings in both columns sit on the same row. */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 96px;
+.hero,
+.columns {
   max-width: 1160px;
   margin: 0 auto;
 }
 
-.intro,
-.stack,
-.section {
-  max-width: 484px;
-}
-
-.grid h2 {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 37px;
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
 }
 
 .intro {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  flex: 0 1 555px;
 }
 
 .introHeading {
@@ -38,14 +30,10 @@
 }
 
 .name {
-  font-size: 68px;
-  font-weight: 700;
+  font-family: var(--font-nav);
+  font-size: 64px;
+  font-weight: 500;
   line-height: 0.9;
-  white-space: pre-line;
-}
-
-.role {
-  line-height: 1.1;
 }
 
 .keyProjects {
@@ -56,10 +44,24 @@
 }
 
 .portrait {
-  width: 100%;
-  max-width: 387px;
+  flex-shrink: 0;
+  width: 295px;
   height: auto;
   object-fit: cover;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 558px) minmax(0, 541px);
+  column-gap: 32px;
+  margin-top: 104px;
+}
+
+.columns h2 {
+  font-family: var(--font-nav);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 37px;
 }
 
 .bold {
@@ -69,77 +71,80 @@
 .stack {
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 50px;
 }
 
 .section {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+}
+
+/* The experience heading sits 40px above the first card, the other headings 30px. */
+.section:has(> .experienceList) {
   gap: 40px;
 }
 
-.entry {
+.experienceList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.coursesList {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-/* Spans both columns; subgrid keeps its cards on the page columns. */
-.experienceSection {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: subgrid;
-  row-gap: 46px;
-}
-
-.experienceSection h2 {
-  grid-column: 1 / -1;
+  gap: 50px;
+  max-width: 536px;
 }
 
 .experienceCard {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 30px;
 }
 
 .experienceHeader {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 16px;
 }
 
 .experienceCompany {
+  font-family: var(--font-nav);
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .experienceMuted {
   color: var(--foreground-muted);
 }
 
-.bulletList {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.tools {
   line-height: 1.1;
 }
 
-/* Markers hang outside so item text lines up with the column edge, as in the mockup. */
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  white-space: pre-line;
+}
+
+.coursesList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 383px;
+}
+
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 21px;
+}
+
 .bulletList li {
   list-style: disc outside;
 }
 
 .skillsList {
-  gap: 20px;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  max-width: 463px;
 }
 
 @media (max-width: 1024px) {
@@ -147,20 +152,29 @@
     padding: 20px 48px 64px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    row-gap: 56px;
+  .hero {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 
-  .intro,
-  .stack,
-  .section {
-    max-width: none;
+  .intro {
+    flex-basis: auto;
   }
 
   .portrait {
-    order: -1;
-    justify-self: center;
+    align-self: center;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    row-gap: 72px;
+    margin-top: 72px;
+  }
+
+  .experienceList,
+  .skillsList,
+  .coursesList {
+    max-width: none;
   }
 }
 
@@ -170,7 +184,7 @@
     font-size: 18px;
   }
 
-  .grid h2,
+  .columns h2,
   .experienceCompany {
     font-size: 28px;
     line-height: 1.2;
@@ -180,7 +194,8 @@
     font-size: 44px;
   }
 
-  .bulletList {
-    padding-left: 20px;
+  .portrait {
+    width: 100%;
+    max-width: 295px;
   }
 }
