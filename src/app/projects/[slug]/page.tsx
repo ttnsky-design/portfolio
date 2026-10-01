@@ -64,7 +64,7 @@ export async function generateMetadata({
     ? `${project.title} — ${project.category}`
     : project.title;
   const fullTitle = `${title} — ${OWNER_NAME}`;
-  const images = [`/og/${project.slug}.png`];
+  const images = ["/og/default.png"];
   return {
     title,
     description,
