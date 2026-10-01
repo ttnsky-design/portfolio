@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CONTACTS, OWNER_NAME, SOCIAL_LINKS } from "@/config/site";
+import { typograph } from "@/lib/typograph";
 import styles from "./page.module.css";
 
 const CONTACTS_TITLE = `Контакты — ${OWNER_NAME}`;
@@ -27,16 +29,37 @@ export default function ContactsPage() {
         <a href={SOCIAL_LINKS.behance} target="_blank" rel="noopener noreferrer">
           Behance
         </a>
+        <Image
+          src="/images/contacts/portrait.jpg"
+          alt={OWNER_NAME}
+          width={166}
+          height={213}
+          className={styles.portrait}
+        />
         <a href={SOCIAL_LINKS.dprofile} target="_blank" rel="noopener noreferrer">
           Dprofile
         </a>
       </div>
+
+      <p className={styles.lead}>
+        {typograph("Буду рада обсудить проекты и возможное сотрудничество :)")}
+      </p>
+
       <div className={styles.details}>
-        <a href={`tel:${CONTACTS.phoneHref}`}>{CONTACTS.phone}</a>
-        <a href={CONTACTS.telegramHref} target="_blank" rel="noopener noreferrer">
-          tg: {CONTACTS.telegram}
-        </a>
-        <a href={`mailto:${CONTACTS.email}`}>{CONTACTS.email}</a>
+        <div className={styles.detail}>
+          <span>мой номер</span>
+          <a href={`tel:${CONTACTS.phoneHref}`}>{CONTACTS.phoneHref}</a>
+        </div>
+        <div className={styles.detail}>
+          <span>я в Telegram</span>
+          <a href={CONTACTS.telegramHref} target="_blank" rel="noopener noreferrer">
+            {CONTACTS.telegram}
+          </a>
+        </div>
+        <div className={styles.detail}>
+          <span>написать на почту</span>
+          <a href={`mailto:${CONTACTS.email}`}>{CONTACTS.email}</a>
+        </div>
       </div>
     </main>
   );

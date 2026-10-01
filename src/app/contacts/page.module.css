@@ -1,29 +1,76 @@
 .page {
-  padding: 60px 140px 100px;
-  max-width: 1440px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  padding: 98px 24px 100px;
+  letter-spacing: -0.01em;
+  text-align: center;
 }
 
 .social {
   display: flex;
-  gap: 32px;
-  font-size: 22px;
+  align-items: center;
+  gap: 39px;
+  font-size: 21.7px;
+  line-height: 26px;
 }
 
 .social a {
   text-decoration: underline;
 }
 
+.portrait {
+  display: block;
+  width: 166px;
+  height: auto;
+}
+
+.lead {
+  max-width: 615px;
+  font-family: var(--font-nav);
+  font-size: 40px;
+  line-height: 36px;
+}
+
 .details {
   display: flex;
+  justify-content: center;
+  gap: 155px;
+}
+
+.detail {
+  display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin-top: 48px;
-  font-size: 22px;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  line-height: 38px;
+}
+
+.detail a {
+  font-family: var(--font-nav);
+  font-size: 40px;
+  color: var(--foreground-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .details {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .details {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 @media (max-width: 640px) {
   .page {
+    gap: 48px;
     padding: 32px 24px 64px;
   }
 
@@ -32,8 +79,21 @@
     font-size: 18px;
   }
 
-  .details {
+  .portrait {
+    width: 128px;
+  }
+
+  .lead {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .detail {
     font-size: 18px;
-    margin-top: 32px;
+    line-height: 1.2;
+  }
+
+  .detail a {
+    font-size: 30px;
   }
 }
